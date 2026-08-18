@@ -1,10 +1,13 @@
 # NeuralForge
 
 [![Repository Quality](https://github.com/sanskarIN/neuralforge/actions/workflows/repository-quality.yml/badge.svg)](https://github.com/sanskarIN/neuralforge/actions/workflows/repository-quality.yml)
+[![Get NeuralForge on Gumroad](https://img.shields.io/badge/Gumroad-Ram%20Sandesh-FF90E8?style=for-the-badge&logo=gumroad&logoColor=000000)](https://ramsandesh.gumroad.com)
 
 **Deep Learning from Zero to Mastery — Companion Repository**
 
 NeuralForge is the open-source companion repository for the **Complete 120-Part Master Edition** of *NeuralForge - Deep Learning from Zero to Mastery* by **Ram Sandesh**.
+
+> **Official store:** [Ram Sandesh on Gumroad — ebooks, publication releases, and digital products](https://ramsandesh.gumroad.com)
 
 The repository is being built as a practical learning system: runnable code, tests, labs, reference implementations, reproducibility utilities, release engineering, and concise part-specific documentation.
 
@@ -14,6 +17,7 @@ The repository is being built as a practical learning system: runnable code, tes
 - Edition: **Complete 120-Part Master Edition**
 - Publication build: **August 2026, Version 1.0**
 - Canonical repository: `https://github.com/sanskarIN/neuralforge`
+- **Official Gumroad store:** **https://ramsandesh.gumroad.com**
 
 ## Current implementation status
 
@@ -97,8 +101,15 @@ docs/          Roadmap, policies, metadata, publishing and QA docs
 - [`docs/VERSIONING.md`](docs/VERSIONING.md) — repository versioning policy
 - [`docs/ROADMAP.md`](docs/ROADMAP.md) — development phases
 - [`docs/ERRATA_POLICY.md`](docs/ERRATA_POLICY.md) — correction workflow
+- [`docs/GUMROAD.md`](docs/GUMROAD.md) — official Gumroad/store-link policy and reusable badge
 - [`SUPPORT.md`](SUPPORT.md) — support routing
 - [`CHANGELOG.md`](CHANGELOG.md) — notable repository changes
+
+## Official Gumroad store
+
+[![Visit Ram Sandesh on Gumroad](https://img.shields.io/badge/Visit%20Store-ramsandesh.gumroad.com-FF90E8?style=for-the-badge&logo=gumroad&logoColor=000000)](https://ramsandesh.gumroad.com)
+
+The official store destination for NeuralForge publication releases and other Ram Sandesh digital products is **https://ramsandesh.gumroad.com**. Repository documentation should use this canonical store URL so readers can find the current storefront from GitHub.
 
 ## Licensing
 
@@ -110,7 +121,7 @@ Third-party libraries, datasets, model weights, and assets retain their own lice
 
 ## Durable links
 
-Permanent NeuralForge publication artifacts intentionally do **not** embed an X/Twitter profile URL. Social handles can change after readers purchase a copy, so durable project metadata uses the canonical repository instead.
+Permanent NeuralForge publication artifacts intentionally do **not** embed an X/Twitter profile URL. Social handles can change after readers purchase a copy, so durable project metadata uses the canonical repository and the official Gumroad storefront instead.
 
 ## Contributing
 
@@ -119,3 +130,7 @@ Read [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`docs/CONTRIBUTOR_SETUP.md`](docs
 ## Citation
 
 Machine-readable citation metadata is available in [`CITATION.cff`](CITATION.cff).
+
+---
+
+**Official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
