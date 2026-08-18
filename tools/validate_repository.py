@@ -29,6 +29,7 @@ REQUIRED_FILES = (
     "docs/GUMROAD.md",
     "docs/METADATA.md",
     "docs/PART_IMPLEMENTATION_STATUS.md",
+    "docs/PUBLISHING_GUIDE.md",
     "docs/RELEASE_CHECKLIST.md",
     "docs/SOCIAL_LINK_POLICY.md",
     ".github/CODEOWNERS",
@@ -65,6 +66,11 @@ IMPLEMENTED_PART_DIRS = (
     "parts/013-optimization",
     "parts/014-regularization",
     "parts/015-normalization-stability",
+    "parts/016-loss-functions-output-design",
+    "parts/017-learning-rate-schedules",
+    "parts/018-initialization-signal-propagation",
+    "parts/019-gradient-flow-stability",
+    "parts/020-training-loop-engineering",
 )
 
 REQUIRED_SOURCE_MODULES = (
@@ -85,6 +91,11 @@ REQUIRED_SOURCE_MODULES = (
     "src/neuralforge/optim.py",
     "src/neuralforge/regularization.py",
     "src/neuralforge/normalization.py",
+    "src/neuralforge/losses.py",
+    "src/neuralforge/schedules.py",
+    "src/neuralforge/initialization.py",
+    "src/neuralforge/gradient_flow.py",
+    "src/neuralforge/training.py",
 )
 
 REQUIRED_MILESTONE_TESTS = (
@@ -93,16 +104,25 @@ REQUIRED_MILESTONE_TESTS = (
     "tests/test_optim.py",
     "tests/test_regularization.py",
     "tests/test_normalization.py",
+    "tests/test_losses.py",
+    "tests/test_schedules.py",
+    "tests/test_initialization.py",
+    "tests/test_gradient_flow.py",
+    "tests/test_training.py",
 )
 
 GUMROAD_REQUIRED_FILES = (
     "README.md",
     "SUPPORT.md",
     "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    "what_changed.md",
     "docs/GUMROAD.md",
     "docs/METADATA.md",
+    "docs/PART_IMPLEMENTATION_STATUS.md",
     "docs/PUBLISHING_GUIDE.md",
     "docs/RELEASE_CHECKLIST.md",
+    "docs/ROADMAP.md",
     "docs/SOCIAL_LINK_POLICY.md",
     ".github/PULL_REQUEST_TEMPLATE.md",
     ".github/ISSUE_TEMPLATE/config.yml",
