@@ -2,6 +2,8 @@
 
 All notable changes to the NeuralForge companion repository will be documented here.
 
+The companion repository uses its own semantic-style versioning. Book/publication Version 1.0 is separate from the Python companion package version.
+
 ## [Unreleased]
 
 ### Added
@@ -30,6 +32,7 @@ All notable changes to the NeuralForge companion repository will be documented h
 - Expanded the README from repository planning notes into a runnable quick-start, implementation-status, automation, documentation, and licensing guide.
 - Advanced the README, roadmap, and implementation tracker from Parts 001–005 to Parts 001–010.
 - Queued Parts 011–015 as the next framework-light neural-network mechanics milestone.
+- Clarified that the companion package/repository version is independent of the book publication version.
 
 ### Verified
 - Pull request #5 exercised the complete Repository Quality workflow successfully before merge.
@@ -38,6 +41,6 @@ All notable changes to the NeuralForge companion repository will be documented h
 - Repository invariant validation passed.
 - Parts 006–010 are being delivered through a dedicated feature branch and will be merged only after the upgraded v7 workflow passes on the pull-request path.
 
-## [1.0.0] - 2026-08-18
+## [0.1.0] - 2026-08-18
 
-Initial repository/documentation foundation for the NeuralForge Complete 120-Part Master Edition companion project.
+Initial repository/documentation and Python package foundation for the NeuralForge Complete 120-Part Master Edition companion project.
