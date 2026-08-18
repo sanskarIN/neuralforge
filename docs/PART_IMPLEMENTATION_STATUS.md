@@ -49,3 +49,9 @@ A part should not be marked **Implemented** until it has, where applicable:
 ## Next batch
 
 Parts **016–020** will turn the framework-light autodiff/training foundations into a more complete training system: objective/output-layer pairing, learning-rate schedules, initialization, gradient-flow diagnostics, and reproducible training-loop engineering.
+
+## Official storefront
+
+Available Ram Sandesh digital publications and storefront releases are linked through the canonical Gumroad destination:
+
+**https://ramsandesh.gumroad.com**
