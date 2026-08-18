@@ -1,5 +1,7 @@
 # Canonical Publication Metadata
 
+[![Official Gumroad Store](https://img.shields.io/badge/Gumroad-ramsandesh.gumroad.com-FF90E8?style=for-the-badge&logo=gumroad&logoColor=000000)](https://ramsandesh.gumroad.com)
+
 - **Title:** NeuralForge - Deep Learning from Zero to Mastery
 - **Edition:** Complete 120-Part Master Edition
 - **Author:** Ram Sandesh
@@ -7,6 +9,7 @@
 - **Publication build:** August 2026
 - **Language:** English
 - **Companion repository:** `https://github.com/sanskarIN/neuralforge`
+- **Official Gumroad store:** **`https://ramsandesh.gumroad.com`**
 - **X/Twitter:** intentionally omitted from immutable publication files
 
 ## Suggested subtitle
@@ -28,4 +31,6 @@ A Project-Driven 120-Part Journey from Neural Network Foundations to Production 
 
 ## Metadata rule
 
-Keep title, author, edition, release/version, and repository destination consistent across every storefront. Store temporary pricing and promotional information in retailer dashboards rather than permanently embedding changeable information in the ebook.
+Keep title, author, edition, release/version, companion repository, and the canonical Gumroad destination consistent across reader-facing GitHub/storefront metadata. Store temporary pricing and promotional information in retailer dashboards rather than permanently embedding changeable promotional claims in the ebook.
+
+See `docs/GUMROAD.md` for the canonical store-link policy.
