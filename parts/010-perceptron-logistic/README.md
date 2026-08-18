@@ -49,3 +49,7 @@ PYTHONPATH=src python -m unittest tests.test_perceptron tests.test_logistic_regr
 ## Next connection
 
 Parts 011–012 can build on these explicit forward computations by introducing computational graphs, automatic differentiation concepts, and backpropagation through multilayer networks.
+
+---
+
+**Official Ram Sandesh Gumroad Storefront:** **https://ramsandesh.gumroad.com**
