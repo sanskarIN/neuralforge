@@ -14,3 +14,5 @@ For ordinary bugs, documentation problems, reproducibility issues, dependency co
 - Pin or document dependency versions for reproducible examples.
 - Review model and dataset licenses before redistributing assets.
 - Do not treat educational examples as production-ready security controls without review.
+
+Storefront/payment issues are separate from repository security reports. The official Ram Sandesh storefront is **https://ramsandesh.gumroad.com**.
