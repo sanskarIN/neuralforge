@@ -1,10 +1,12 @@
 # NeuralForge
 
+[![Repository Quality](https://github.com/sanskarIN/neuralforge/actions/workflows/repository-quality.yml/badge.svg)](https://github.com/sanskarIN/neuralforge/actions/workflows/repository-quality.yml)
+
 **Deep Learning from Zero to Mastery — Companion Repository**
 
 NeuralForge is the open-source companion repository for the **Complete 120-Part Master Edition** of *NeuralForge - Deep Learning from Zero to Mastery* by **Ram Sandesh**.
 
-This repository is intended for practical code, labs, tests, reference implementations, reproducible examples, release notes, and supporting documentation for the book.
+The repository is being built as a practical learning system: runnable code, tests, labs, reference implementations, reproducibility utilities, release engineering, and concise part-specific documentation.
 
 ## Publication
 
@@ -13,27 +15,97 @@ This repository is intended for practical code, labs, tests, reference implement
 - Publication build: **August 2026, Version 1.0**
 - Canonical repository: `https://github.com/sanskarIN/neuralforge`
 
-## Repository scope
+## Current implementation status
 
-Planned repository content includes:
+Parts **001–005** now have runnable companion implementations and tests:
 
-- Part-by-part companion code
-- Practical labs and capstone implementations
-- Tests and reproducibility checks
-- Environment/setup documentation
-- Reference implementations
-- Release and errata documentation
+| Part | Topic | Companion focus |
+|---:|---|---|
+| 001 | Foundations | Logistic neuron, stable sigmoid/BCE, gradient-descent OR-gate lab |
+| 002 | Python Essentials | Tensor shapes, flattening, element counts, reshape validation |
+| 003 | NumPy Mastery | Vectorization, standardization, dense layers, stable softmax |
+| 004 | Linear Algebra | Dot products, norms, cosine similarity, transpose, matmul, outer products |
+| 005 | Calculus | Numerical derivatives, gradients, and analytical gradient checking |
+
+See [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) for the 120-part implementation tracker.
+
+## Quick start
+
+Clone the repository and run the dependency-free test suite:
+
+```bash
+git clone https://github.com/sanskarIN/neuralforge.git
+cd neuralforge
+python -m unittest discover -s tests -p "test_*.py" -v
+```
+
+For imports when running examples directly from the repository:
+
+```bash
+PYTHONPATH=src python parts/001-foundations/train_or_gate.py
+```
+
+PowerShell:
+
+```powershell
+$env:PYTHONPATH = "src"
+python parts/001-foundations/train_or_gate.py
+```
+
+The core companion package supports Python **3.10+**. Part 003 intentionally isolates its current NumPy dependency and uses Python **3.12+**.
+
+## Quality and automation
+
+The `Repository Quality` workflow currently checks:
+
+- repository invariants and durable-link policy;
+- whitespace and Python compilation;
+- dependency-free unit tests on Python 3.10, 3.11, and 3.12;
+- the isolated Part 003 NumPy test suite on Python 3.12.
+
+Dependabot monitors GitHub Actions and the Part 003 Python dependency. A separate non-destructive Release Readiness workflow validates the repository, runs tests, generates SHA-256 checksums, and builds a source archive without automatically publishing a release.
+
+## Repository layout
+
+```text
+.github/       GitHub workflows, templates, CODEOWNERS, Dependabot
+src/           Shared neuralforge Python package
+parts/         Part-by-part companion implementations
+labs/          Cross-part practical labs and future capstones
+examples/      Reusable focused examples
+ tests/         Dependency-free package tests
+ tools/         Repository validation utilities
+ docs/          Roadmap, policies, metadata, publishing and QA docs
+```
+
+## Documentation
+
+- [`docs/CONTRIBUTOR_SETUP.md`](docs/CONTRIBUTOR_SETUP.md) — contributor environment and workflow
+- [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) — Parts 001–120 implementation tracker
+- [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) — experiment reproducibility policy
+- [`docs/DEPENDENCY_POLICY.md`](docs/DEPENDENCY_POLICY.md) — dependency and licensing rules
+- [`docs/VERSIONING.md`](docs/VERSIONING.md) — repository versioning policy
+- [`docs/ROADMAP.md`](docs/ROADMAP.md) — development phases
+- [`docs/ERRATA_POLICY.md`](docs/ERRATA_POLICY.md) — correction workflow
+- [`SUPPORT.md`](SUPPORT.md) — support routing
+- [`CHANGELOG.md`](CHANGELOG.md) — notable repository changes
 
 ## Licensing
 
-Original companion **source code** in this repository is intended to use the **MIT License** unless a file or third-party dependency states otherwise.
+Original companion **source code** in this repository uses the **MIT License** unless a file or third-party dependency states otherwise.
 
-The **book manuscript, PDF/EPUB/DOCX publication files, book layout, exercises, explanations, cover, and publication assets are not automatically licensed under MIT**. See `BOOK_LICENSE.md` for the book-content rights policy.
+The **book manuscript, PDF/EPUB/DOCX publication files, book layout, exercises, explanations, cover, and publication assets are not automatically licensed under MIT**. See [`BOOK_LICENSE.md`](BOOK_LICENSE.md) for the book-content rights policy.
+
+Third-party libraries, datasets, model weights, and assets retain their own licenses and attribution requirements.
 
 ## Durable links
 
-The publication intentionally does **not** embed an X/Twitter URL. Social handles can change after readers purchase a copy, so the book uses stable project/publisher-controlled destinations instead.
+Permanent NeuralForge publication artifacts intentionally do **not** embed an X/Twitter profile URL. Social handles can change after readers purchase a copy, so durable project metadata uses the canonical repository instead.
 
 ## Contributing
 
-See `CONTRIBUTING.md` for contribution and commit conventions.
+Read [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`docs/CONTRIBUTOR_SETUP.md`](docs/CONTRIBUTOR_SETUP.md) before contributing. Pull requests run the repository-quality checks automatically.
+
+## Citation
+
+Machine-readable citation metadata is available in [`CITATION.cff`](CITATION.cff).
