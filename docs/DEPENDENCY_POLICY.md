@@ -27,3 +27,7 @@ Commit lock files when they improve reproducibility for an executable applicatio
 ## Large AI dependencies
 
 GPU frameworks, model runtimes, and accelerator toolkits may have platform-specific installation requirements. Document those requirements alongside the relevant part instead of assuming one environment works everywhere.
+
+---
+
+**Official Gumroad Storefront:** **https://ramsandesh.gumroad.com**
