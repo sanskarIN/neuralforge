@@ -24,7 +24,7 @@ For available digital publications and storefront releases, visit the **Ram Sand
 
 ## Current implementation status
 
-Parts **001–015** now have runnable companion implementations and automated tests:
+Parts **001–020** now have runnable companion implementations and automated tests:
 
 | Part | Topic | Companion focus |
 |---:|---|---|
@@ -43,6 +43,11 @@ Parts **001–015** now have runnable companion implementations and automated te
 | 013 | Optimization | SGD, Momentum, RMSProp, Adam, weight decay, global gradient clipping |
 | 014 | Regularization | L1/L2, inverted dropout, early stopping, generalization monitoring |
 | 015 | Normalization & Stability | Batch/layer normalization, running moments, trainable affine terms, stable softmax |
+| 016 | Loss & Output Design | MSE/MAE/Huber, stable BCE/CE from logits, explicit output/loss pairings |
+| 017 | Learning-Rate Control | Step/exponential/cosine/warmup schedules and validation plateau control |
+| 018 | Initialization | Xavier/He/LeCun initialization and multi-layer signal-variance profiling |
+| 019 | Gradient Flow | Layerwise gradient health, norms, zero/non-finite checks, relative update ratios |
+| 020 | Training-Loop Engineering | Reproducible experiment fingerprints, schedules, clipping, validation, early stopping |
 
 See [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) for the 120-part implementation tracker.
 
@@ -59,14 +64,14 @@ python -m unittest discover -s tests -p "test_*.py" -v
 For imports when running examples directly from the repository:
 
 ```bash
-PYTHONPATH=src python parts/011-autograd/autograd_demo.py
+PYTHONPATH=src python parts/020-training-loop/experiment_runner_demo.py
 ```
 
 PowerShell:
 
 ```powershell
 $env:PYTHONPATH = "src"
-python parts/011-autograd/autograd_demo.py
+python parts/020-training-loop/experiment_runner_demo.py
 ```
 
 The core companion package supports Python **3.10+**. Part 003 intentionally isolates its current NumPy dependency and uses Python **3.12+**.
@@ -77,6 +82,7 @@ The `Repository Quality` workflow checks:
 
 - repository invariants and durable-link policy;
 - required canonical repository and Gumroad storefront links on key GitHub-facing surfaces;
+- required implementation structure for Parts 001–020;
 - whitespace and Python compilation;
 - dependency-free unit tests on Python 3.10, 3.11, and 3.12;
 - the isolated Part 003 NumPy test suite on Python 3.12.
