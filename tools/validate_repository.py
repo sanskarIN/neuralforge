@@ -71,6 +71,11 @@ IMPLEMENTED_PART_DIRS = (
     "parts/018-initialization-signal-propagation",
     "parts/019-gradient-flow-stability",
     "parts/020-training-loop-engineering",
+    "parts/021-convolutional-neural-networks",
+    "parts/022-cnn-architecture-design",
+    "parts/023-efficient-mobile-vision",
+    "parts/024-object-detection",
+    "parts/025-image-segmentation",
 )
 
 REQUIRED_SOURCE_MODULES = (
@@ -96,6 +101,12 @@ REQUIRED_SOURCE_MODULES = (
     "src/neuralforge/initialization.py",
     "src/neuralforge/gradient_flow.py",
     "src/neuralforge/training.py",
+    "src/neuralforge/convolution.py",
+    "src/neuralforge/cnn_architecture.py",
+    "src/neuralforge/mobile_vision.py",
+    "src/neuralforge/detection.py",
+    "src/neuralforge/segmentation.py",
+    "src/neuralforge/vision.py",
 )
 
 REQUIRED_MILESTONE_TESTS = (
@@ -109,6 +120,11 @@ REQUIRED_MILESTONE_TESTS = (
     "tests/test_initialization.py",
     "tests/test_gradient_flow.py",
     "tests/test_training.py",
+    "tests/test_convolution.py",
+    "tests/test_cnn_architecture.py",
+    "tests/test_mobile_vision.py",
+    "tests/test_detection.py",
+    "tests/test_segmentation.py",
 )
 
 GUMROAD_REQUIRED_FILES = (
