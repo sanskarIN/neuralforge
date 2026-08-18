@@ -7,3 +7,9 @@ The MIT License in this repository applies to original companion **software code
 No permission is granted to redistribute the complete paid manuscript or publication package merely because companion code is available in this public repository.
 
 Third-party libraries, datasets, models, images, fonts, and other assets retain their own licenses and terms.
+
+For officially offered Ram Sandesh digital publications, use the canonical storefront destination:
+
+**https://ramsandesh.gumroad.com**
+
+See `STORE.md` for the repository/storefront boundary.
