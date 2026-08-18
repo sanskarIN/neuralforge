@@ -30,6 +30,11 @@ Before tagging:
 2. Update `CHANGELOG.md`.
 3. Confirm licensing and attribution for new dependencies/assets.
 4. Confirm no secrets or unstable social-profile URLs are present.
-5. Run the Release Readiness workflow and review its checksum/source artifacts.
+5. Confirm the canonical storefront remains `https://ramsandesh.gumroad.com` on GitHub-facing release surfaces.
+6. Run the Release Readiness workflow and review its checksum/source artifacts.
 
 Tags should point to reviewed commits on `main`.
+
+---
+
+**Official Gumroad Storefront:** **https://ramsandesh.gumroad.com**
