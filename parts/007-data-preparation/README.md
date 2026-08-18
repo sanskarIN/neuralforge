@@ -44,3 +44,7 @@ python parts/007-data-preparation/leakage_demo.py
 ```bash
 PYTHONPATH=src python -m unittest tests.test_data_preparation -v
 ```
+
+---
+
+**NeuralForge / Ram Sandesh official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
