@@ -90,6 +90,23 @@ class TrainingRunnerTests(unittest.TestCase):
         self.assertAlmostEqual(result.history[0].learning_rate, 0.1)
         self.assertAlmostEqual(result.history[-1].learning_rate, 0.01)
 
+    def test_warmup_cosine_schedule_reaches_peak_and_floor(self) -> None:
+        config = ExperimentConfig(
+            input_size=1,
+            layer_sizes=(1,),
+            epochs=6,
+            learning_rate=0.1,
+            optimizer="sgd",
+            schedule="warmup_cosine",
+            warmup_epochs=2,
+            min_learning_rate=0.01,
+            seed=5,
+        )
+        result = run_regression_experiment(self.FEATURES, self.TARGETS, config=config)
+        self.assertAlmostEqual(result.history[0].learning_rate, 0.01)
+        self.assertAlmostEqual(result.history[2].learning_rate, 0.1)
+        self.assertAlmostEqual(result.history[-1].learning_rate, 0.01)
+
     def test_validation_and_early_stopping(self) -> None:
         config = ExperimentConfig(
             input_size=1,
@@ -134,8 +151,12 @@ class TrainingRunnerTests(unittest.TestCase):
                 layer_sizes=(1,),
                 epochs=4,
                 schedule="warmup_cosine",
-                warmup_epochs=4,
+                warmup_epochs=3,
             )
+        with self.assertRaises(ValueError):
+            ExperimentConfig(input_size=1, layer_sizes=(1,), hidden_activation="bad")  # type: ignore[arg-type]
+        with self.assertRaises(ValueError):
+            ExperimentConfig(input_size=1, layer_sizes=(1,), seed=-1)
         config = ExperimentConfig(input_size=1, layer_sizes=(1,), epochs=2)
         with self.assertRaises(ValueError):
             run_regression_experiment([[1.0, 2.0]], [1.0], config=config)
