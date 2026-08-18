@@ -34,3 +34,7 @@ PYTHONPATH=src python -m unittest tests.test_foundations -v
 ```
 
 The implementation shared by this lab lives in `src/neuralforge/foundations.py` so later parts can reuse and extend it without duplicating logic.
+
+---
+
+**NeuralForge / Ram Sandesh official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
