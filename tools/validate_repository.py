@@ -13,9 +13,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CANONICAL_REPO = "https://github.com/sanskarIN/neuralforge"
+CANONICAL_GUMROAD = "https://ramsandesh.gumroad.com"
+GUMROAD_BADGE = "assets/gumroad-storefront.svg"
 
 REQUIRED_FILES = (
     "README.md",
+    "STORE.md",
     "LICENSE",
     "BOOK_LICENSE.md",
     "CONTRIBUTING.md",
@@ -25,17 +28,27 @@ REQUIRED_FILES = (
     "what_changed.md",
     "CITATION.cff",
     "pyproject.toml",
+    GUMROAD_BADGE,
     "docs/METADATA.md",
     "docs/PART_IMPLEMENTATION_STATUS.md",
+    "docs/PUBLISHING_GUIDE.md",
     "docs/RELEASE_CHECKLIST.md",
+    "docs/REPOSITORY_STRUCTURE.md",
+    "docs/ROADMAP.md",
     "docs/SOCIAL_LINK_POLICY.md",
     ".github/CODEOWNERS",
+    ".github/FUNDING.yml",
     ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/bug_report.md",
+    ".github/ISSUE_TEMPLATE/documentation.md",
+    ".github/ISSUE_TEMPLATE/feature_request.md",
     ".github/workflows/repository-quality.yml",
     ".github/workflows/release-readiness.yml",
 )
 
 REQUIRED_DIRS = (
+    "assets",
     "parts",
     "src/neuralforge",
     "labs",
@@ -44,6 +57,28 @@ REQUIRED_DIRS = (
     "tools",
     "docs",
     ".github/ISSUE_TEMPLATE",
+)
+
+GUMROAD_REQUIRED_SURFACES = (
+    "README.md",
+    "STORE.md",
+    "SUPPORT.md",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    "what_changed.md",
+    "pyproject.toml",
+    "docs/METADATA.md",
+    "docs/PUBLISHING_GUIDE.md",
+    "docs/RELEASE_CHECKLIST.md",
+    "docs/REPOSITORY_STRUCTURE.md",
+    "docs/ROADMAP.md",
+    "docs/SOCIAL_LINK_POLICY.md",
+    ".github/FUNDING.yml",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/bug_report.md",
+    ".github/ISSUE_TEMPLATE/documentation.md",
+    ".github/ISSUE_TEMPLATE/feature_request.md",
 )
 
 IMPLEMENTED_PART_DIRS = (
@@ -134,6 +169,35 @@ def validate_implemented_parts(errors: list[str]) -> None:
             errors.append(f"implemented part has no runnable Python material: {relative}")
 
 
+def validate_gumroad_surfaces(errors: list[str]) -> None:
+    for relative in GUMROAD_REQUIRED_SURFACES:
+        path = ROOT / relative
+        if not path.is_file():
+            errors.append(f"missing Gumroad-facing surface: {relative}")
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            errors.append(f"Gumroad-facing surface is not UTF-8 text: {relative}")
+            continue
+        if CANONICAL_GUMROAD not in text:
+            errors.append(
+                f"canonical Gumroad storefront missing from {relative}: {CANONICAL_GUMROAD}"
+            )
+
+    readme = ROOT / "README.md"
+    if readme.is_file():
+        text = readme.read_text(encoding="utf-8")
+        if GUMROAD_BADGE not in text:
+            errors.append(f"README.md does not reference the Gumroad badge: {GUMROAD_BADGE}")
+
+    funding = ROOT / ".github/FUNDING.yml"
+    if funding.is_file():
+        text = funding.read_text(encoding="utf-8")
+        if "custom:" not in text or CANONICAL_GUMROAD not in text:
+            errors.append(".github/FUNDING.yml does not define the canonical Gumroad custom link")
+
+
 def main() -> int:
     errors: list[str] = []
 
@@ -154,6 +218,7 @@ def main() -> int:
             errors.append(f"missing milestone test module: {relative}")
 
     validate_implemented_parts(errors)
+    validate_gumroad_surfaces(errors)
 
     readme = ROOT / "README.md"
     if readme.is_file() and CANONICAL_REPO not in readme.read_text(encoding="utf-8"):
@@ -178,11 +243,13 @@ def main() -> int:
 
     print("NeuralForge repository validation passed.")
     print(f"Canonical repository: {CANONICAL_REPO}")
+    print(f"Canonical Gumroad storefront: {CANONICAL_GUMROAD}")
     print(f"Checked {len(REQUIRED_FILES)} required files.")
     print(f"Checked {len(REQUIRED_DIRS)} required directories.")
     print(f"Checked {len(REQUIRED_SOURCE_MODULES)} shared source modules.")
     print(f"Checked {len(REQUIRED_MILESTONE_TESTS)} milestone test modules.")
     print(f"Checked {len(IMPLEMENTED_PART_DIRS)} implemented part directories.")
+    print(f"Checked {len(GUMROAD_REQUIRED_SURFACES)} Gumroad-facing surfaces.")
     return 0
 
 

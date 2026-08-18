@@ -31,20 +31,31 @@ The companion repository uses its own semantic-style versioning. Book/publicatio
 - Part 014 companion: differentiable L1/L2 penalties, inverted dropout, early stopping, generalization-gap/norm monitoring, demo, and tests.
 - Part 015 companion: differentiable batch/layer normalization, trainable affine parameters, running evaluation moments, stable softmax, demo, and tests.
 - Part-by-part implementation status tracker for the 120-part curriculum.
+- Official Ram Sandesh Gumroad storefront integration using canonical URL `https://ramsandesh.gumroad.com`.
+- Custom clickable repository storefront asset at `assets/gumroad-storefront.svg`.
+- Dedicated `STORE.md` documenting the repository/storefront boundary.
+- `.github/FUNDING.yml` custom link for the Gumroad storefront.
+- Gumroad storefront visibility in the issue chooser, issue templates, PR template, support/contribution docs, canonical metadata, publishing guide, durable-link policy, release checklist, and roadmap.
 
 ### Changed
 - Modernized GitHub workflows to `actions/checkout@v7`, `actions/setup-python@v7`, and `actions/upload-artifact@v7`.
-- Expanded the README from repository planning notes into a runnable quick-start, implementation-status, automation, documentation, and licensing guide.
+- Expanded the README from repository planning notes into a runnable quick-start, implementation-status, automation, documentation, licensing, and storefront guide.
 - Advanced the README, roadmap, package API, validator, and implementation tracker through Parts 001–015.
 - Strengthened repository validation to require all implemented Part 001–015 directories, shared modules, and Part 011–015 milestone tests.
 - Queued Parts 016–020 as the next training-system engineering milestone.
 - Clarified that the companion package/repository version is independent of the book publication version.
+- Promoted `https://ramsandesh.gumroad.com` to a canonical durable storefront destination on GitHub-facing NeuralForge surfaces.
 
 ### Verified
 - Pull request #5 exercised the original complete Repository Quality workflow successfully before merge.
 - Pull request #7 merged Parts 006–010 after 65 dependency-free tests passed on Python 3.10, 3.11, and 3.12, the isolated NumPy Part 003 job passed, and repository invariant validation passed.
-- The Parts 011–015 milestone is being delivered through a dedicated feature branch and will be merged only after its exact PR head passes the same multi-version CI gate.
+- Pull request #8 merged Parts 011–015 after repository validation, Python 3.10/3.11/3.12 tests, and the isolated NumPy Part 003 job all passed on the exact PR head.
+- Gumroad storefront changes are being delivered through a dedicated feature branch and will be merged only after Repository Quality passes with canonical storefront checks enabled.
 
 ## [0.1.0] - 2026-08-18
 
 Initial repository/documentation and Python package foundation for the NeuralForge Complete 120-Part Master Edition companion project.
+
+---
+
+**Official Gumroad Storefront:** **https://ramsandesh.gumroad.com**

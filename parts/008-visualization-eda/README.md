@@ -39,3 +39,7 @@ PYTHONPATH=src python -m unittest tests.test_eda -v
 ## Interpretation rule
 
 EDA can reveal patterns worth investigating, but a plot or correlation does not prove causation. Keep exploratory decisions separate from final test-set evaluation to avoid turning the test set into another tuning signal.
+
+---
+
+**Official Ram Sandesh Gumroad Storefront:** **https://ramsandesh.gumroad.com**

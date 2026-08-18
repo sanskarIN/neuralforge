@@ -34,3 +34,9 @@ What did you expect to happen?
 ## Additional context
 
 Logs, screenshots, or test output that help diagnose the issue.
+
+---
+
+**Official Gumroad Storefront:** **https://ramsandesh.gumroad.com**
+
+Storefront/payment/account issues should be handled through the storefront; use this template for reproducible NeuralForge code or documentation bugs.

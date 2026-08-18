@@ -39,3 +39,7 @@ PYTHONPATH=src python -m unittest tests.test_statistics -v
 ## Reproducibility note
 
 Bootstrap results use a local seeded random generator. Reusing the same data, seed, confidence level, and resample count produces the same interval for this implementation.
+
+---
+
+**Official Ram Sandesh Gumroad Storefront:** **https://ramsandesh.gumroad.com**

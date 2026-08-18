@@ -12,3 +12,7 @@ A useful erratum report should include:
 - Minimal reproduction for code issues
 
 Do not post paid manuscript pages in full. Quote only the minimum text necessary to identify a correction.
+
+When corrected publication files are offered through the official storefront, the canonical Ram Sandesh Gumroad destination is:
+
+**https://ramsandesh.gumroad.com**

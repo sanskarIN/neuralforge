@@ -16,3 +16,7 @@ NeuralForge is an educational and engineering-focused open-source project. Be re
 Harassment, threats, discriminatory abuse, doxxing, spam, deliberate misinformation, or posting private credentials/data are not acceptable.
 
 Project maintainers may remove content or restrict participation when necessary to keep the repository safe and useful.
+
+---
+
+**Official Ram Sandesh Gumroad Storefront:** **https://ramsandesh.gumroad.com**

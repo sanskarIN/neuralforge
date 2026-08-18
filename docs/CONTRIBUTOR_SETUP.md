@@ -2,6 +2,12 @@
 
 This guide defines the baseline workflow for contributing to the NeuralForge companion repository.
 
+## Official storefront
+
+**https://ramsandesh.gumroad.com**
+
+GitHub is the contribution surface; Gumroad is the official Ram Sandesh storefront for available digital publications and storefront releases.
+
 ## Requirements
 
 - Git
@@ -27,6 +33,8 @@ python tools/validate_repository.py
 python -m compileall -q tools
 ```
 
+The validator also checks that the canonical Gumroad storefront remains available on the repository's key GitHub-facing surfaces.
+
 ## Branch workflow
 
 1. Start from an up-to-date `main` branch.
@@ -45,6 +53,8 @@ Do not commit:
 - datasets without clear redistribution rights;
 - unstable X/Twitter profile URLs in durable project metadata.
 
+When adding storefront references to GitHub-facing docs, use only the canonical durable URL: `https://ramsandesh.gumroad.com` unless a product-specific URL is intentionally required.
+
 ## Commit style
 
 Use concise conventional-style subjects when practical, for example:
@@ -54,3 +64,7 @@ Use concise conventional-style subjects when practical, for example:
 - `docs: expand CUDA setup guidance`
 - `test: cover model checkpoint loader`
 - `chore: update CI dependency`
+
+---
+
+**Official Gumroad Storefront:** **https://ramsandesh.gumroad.com**

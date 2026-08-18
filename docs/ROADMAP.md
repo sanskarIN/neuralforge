@@ -8,7 +8,11 @@ Completed foundation work includes:
 - contribution, support, security, and conduct policies;
 - canonical publication metadata and durable-link policy;
 - CODEOWNERS, pull-request template, issue templates, and issue intake configuration;
-- citation metadata, editor configuration, dependency policy, and contributor setup.
+- citation metadata, editor configuration, dependency policy, and contributor setup;
+- official Ram Sandesh Gumroad storefront integration across GitHub-facing surfaces;
+- custom clickable storefront badge, `STORE.md`, and `.github/FUNDING.yml`.
+
+Official storefront: **https://ramsandesh.gumroad.com**
 
 ## Phase 2 — Part-by-part companion code — In progress
 
@@ -30,7 +34,8 @@ Add practical cross-part labs, reference implementations, legally redistributabl
 
 Completed/in-progress work includes:
 
-- repository invariant validator that now enforces Parts 001–015 implementation structure;
+- repository invariant validator that enforces Parts 001–015 implementation structure;
+- canonical GitHub repository and Gumroad storefront checks on key public surfaces;
 - Python compilation checks;
 - dependency-free unit-test matrix on Python 3.10, 3.11, and 3.12;
 - isolated NumPy Part 003 tests on Python 3.12;
@@ -46,6 +51,7 @@ Future additions should include framework-specific smoke tests, static analysis,
 Current release-readiness automation:
 
 - validates repository invariants;
+- checks canonical repository/storefront metadata;
 - compiles repository Python;
 - runs dependency-free tests;
 - creates SHA-256 manifests;
@@ -57,7 +63,7 @@ Tagged public releases should begin only after a deliberate version decision and
 
 ## Phase 6 — Maintenance — Ongoing
 
-Maintain `CHANGELOG.md`, errata, dependency updates, security fixes, tests, compatibility notes, and durable project metadata. Permanent ebook copies should continue to avoid changeable social-media profile links.
+Maintain `CHANGELOG.md`, errata, dependency updates, security fixes, tests, compatibility notes, durable project metadata, and the canonical Gumroad storefront destination. Permanent ebook copies should continue to avoid changeable social-media profile links.
 
 ## Next implementation milestone
 
@@ -70,3 +76,7 @@ Implement Parts **016–020**:
 5. Training-Loop Engineering & Reproducible Experiment Runners
 
 This milestone should convert the current framework-light neural-network mechanics into a more systematic training stack with objective/output pairing, schedule control, signal propagation diagnostics, and reproducible experiment orchestration.
+
+---
+
+**Official Gumroad Storefront:** **https://ramsandesh.gumroad.com**

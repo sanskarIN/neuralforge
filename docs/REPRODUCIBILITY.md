@@ -35,3 +35,7 @@ Part-specific code may provide pinned or bounded dependency files. Avoid unneces
 ## Result reporting
 
 Separate measured results from illustrative/example values. When hardware materially affects latency, throughput, memory, or energy use, state the tested hardware.
+
+---
+
+**Official Gumroad Storefront:** **https://ramsandesh.gumroad.com**

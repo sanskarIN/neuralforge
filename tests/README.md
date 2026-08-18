@@ -13,3 +13,7 @@ Recommended test layers:
 - Reproducibility checks with documented seeds and environment versions
 
 Tests should be fast enough for routine development; expensive accelerator benchmarks should be separated from the default test suite.
+
+---
+
+**Official Ram Sandesh Gumroad Storefront:** **https://ramsandesh.gumroad.com**

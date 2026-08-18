@@ -2,11 +2,17 @@
 
 [![Repository Quality](https://github.com/sanskarIN/neuralforge/actions/workflows/repository-quality.yml/badge.svg)](https://github.com/sanskarIN/neuralforge/actions/workflows/repository-quality.yml)
 
+[![Explore the Ram Sandesh Gumroad Store](assets/gumroad-storefront.svg)](https://ramsandesh.gumroad.com)
+
+## **Official Gumroad Storefront — https://ramsandesh.gumroad.com**
+
 **Deep Learning from Zero to Mastery — Companion Repository**
 
 NeuralForge is the open-source companion repository for the **Complete 120-Part Master Edition** of *NeuralForge - Deep Learning from Zero to Mastery* by **Ram Sandesh**.
 
 The repository is being built as a practical learning system: runnable code, tests, labs, reference implementations, reproducibility utilities, release engineering, and concise part-specific documentation.
+
+For available digital publications and storefront releases, visit the **Ram Sandesh Gumroad Store**: **https://ramsandesh.gumroad.com**. See [`STORE.md`](STORE.md) for the repository/storefront boundary.
 
 ## Publication
 
@@ -14,6 +20,7 @@ The repository is being built as a practical learning system: runnable code, tes
 - Edition: **Complete 120-Part Master Edition**
 - Publication build: **August 2026, Version 1.0**
 - Canonical repository: `https://github.com/sanskarIN/neuralforge`
+- Official Gumroad storefront: **https://ramsandesh.gumroad.com**
 
 ## Current implementation status
 
@@ -69,6 +76,7 @@ The core companion package supports Python **3.10+**. Part 003 intentionally iso
 The `Repository Quality` workflow checks:
 
 - repository invariants and durable-link policy;
+- required canonical repository and Gumroad storefront links on key GitHub-facing surfaces;
 - whitespace and Python compilation;
 - dependency-free unit tests on Python 3.10, 3.11, and 3.12;
 - the isolated Part 003 NumPy test suite on Python 3.12.
@@ -78,7 +86,8 @@ Dependabot monitors GitHub Actions and the Part 003 Python dependency. A separat
 ## Repository layout
 
 ```text
-.github/       GitHub workflows, templates, CODEOWNERS, Dependabot
+.github/       GitHub workflows, templates, CODEOWNERS, funding and Dependabot
+assets/        Repository-facing visual assets, including the Gumroad storefront badge
 src/           Shared neuralforge Python package
 parts/         Part-by-part companion implementations
 labs/          Cross-part practical labs and future capstones
@@ -90,6 +99,7 @@ docs/          Roadmap, policies, metadata, publishing and QA docs
 
 ## Documentation
 
+- [`STORE.md`](STORE.md) — official Gumroad storefront and repository/storefront boundary
 - [`docs/CONTRIBUTOR_SETUP.md`](docs/CONTRIBUTOR_SETUP.md) — contributor environment and workflow
 - [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) — Parts 001–120 implementation tracker
 - [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) — experiment reproducibility policy
@@ -110,7 +120,10 @@ Third-party libraries, datasets, model weights, and assets retain their own lice
 
 ## Durable links
 
-Permanent NeuralForge publication artifacts intentionally do **not** embed an X/Twitter profile URL. Social handles can change after readers purchase a copy, so durable project metadata uses the canonical repository instead.
+Permanent NeuralForge publication artifacts intentionally do **not** embed an X/Twitter profile URL. Social handles can change after readers purchase a copy, so durable project metadata uses the canonical repository and the official storefront instead:
+
+- Repository: `https://github.com/sanskarIN/neuralforge`
+- Gumroad: **https://ramsandesh.gumroad.com**
 
 ## Contributing
 
@@ -119,3 +132,7 @@ Read [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`docs/CONTRIBUTOR_SETUP.md`](docs
 ## Citation
 
 Machine-readable citation metadata is available in [`CITATION.cff`](CITATION.cff).
+
+---
+
+**Official Gumroad Storefront:** **https://ramsandesh.gumroad.com**

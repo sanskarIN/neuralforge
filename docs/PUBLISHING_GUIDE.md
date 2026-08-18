@@ -2,6 +2,12 @@
 
 This repository accompanies **NeuralForge - Deep Learning from Zero to Mastery**, Complete 120-Part Master Edition, by **Ram Sandesh**.
 
+## Official Gumroad storefront
+
+**https://ramsandesh.gumroad.com**
+
+The Gumroad storefront above is the canonical direct-store destination to use in GitHub-facing NeuralForge documentation and release metadata when a storefront link is appropriate.
+
 The full publication-package guide is maintained with the release artifacts. This repository document records the canonical publishing policy and platform workflow.
 
 ## Canonical release files
@@ -14,7 +20,7 @@ The full publication-package guide is maintained with the release artifacts. Thi
 
 ## Recommended publication order
 
-1. Gumroad for a direct PDF/EPUB bundle.
+1. Gumroad — official direct storefront: `https://ramsandesh.gumroad.com`
 2. Amazon KDP for Kindle distribution.
 3. Google Play Books with EPUB plus PDF when possible.
 4. Kobo Writing Life with EPUB.
@@ -31,6 +37,7 @@ Do not distribute the same edition to the same retailer both directly and throug
 - Edition: `Complete 120-Part Master Edition`
 - Author: `Ram Sandesh`
 - Companion repository: `https://github.com/sanskarIN/neuralforge`
+- Official Gumroad storefront: `https://ramsandesh.gumroad.com`
 - X/Twitter: intentionally omitted
 
 ## Release workflow
@@ -40,9 +47,14 @@ Do not distribute the same edition to the same retailer both directly and throug
 3. Scan all outputs for stale social links.
 4. Validate PDF navigation and EPUB structure.
 5. Check representative early, middle, and final parts.
-6. Update metadata, changelog, and checksums.
-7. Upload to storefronts.
-8. Record live listing URLs in a private release ledger rather than hard-coding changeable links into the ebook.
+6. Update metadata, changelog, checksums, and storefront references.
+7. Verify the canonical Gumroad URL is exactly `https://ramsandesh.gumroad.com` on GitHub-facing release surfaces.
+8. Upload to storefronts.
+9. Record product-specific listing URLs in a release ledger rather than hard-coding short-lived campaign URLs into the ebook.
+
+## Storefront badge
+
+GitHub pages may use the custom repository asset `assets/gumroad-storefront.svg` as a clickable visual pointing to `https://ramsandesh.gumroad.com`. The badge is a NeuralForge repository storefront graphic and is not represented as an official Gumroad corporate logo.
 
 ## Account and legal eligibility
 
@@ -51,3 +63,7 @@ Never falsify age, identity, tax, bank, or publisher information. Store eligibil
 ## Licensing
 
 The repository's MIT License is for companion software code. The book and publication assets remain separately copyrighted; see `BOOK_LICENSE.md`.
+
+---
+
+**Official Gumroad Storefront:** **https://ramsandesh.gumroad.com**
