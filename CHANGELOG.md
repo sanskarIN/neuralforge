@@ -8,11 +8,11 @@ The companion repository uses its own semantic-style versioning. Book/publicatio
 
 ### Added
 - GitHub-native collaboration layer with CODEOWNERS, pull-request template, feature/documentation issue templates, and structured issue intake.
-- Repository invariant validator that checks required project structure, canonical repository metadata, and durable social-link policy.
+- Repository invariant validator that checks required project structure, canonical repository metadata, durable-link policy, and canonical Gumroad visibility.
 - Repository Quality CI with dependency-free unit tests on Python 3.10, 3.11, and 3.12.
 - Isolated NumPy Part 003 CI job and weekly dependency monitoring.
 - Non-destructive Release Readiness workflow that validates, tests, creates SHA-256 manifests, builds a source archive, and uploads temporary artifacts.
-- Contributor setup, versioning, reproducibility, dependency, and support policies.
+- Contributor setup, versioning, reproducibility, dependency, support, and Gumroad/store-link policies.
 - `CITATION.cff`, `.editorconfig`, Python package metadata, and shared `neuralforge` package foundation.
 - Cross-framework reproducibility helper with optional NumPy, PyTorch, and TensorFlow seeding.
 - Part 001 companion: stable sigmoid/BCE, logistic neuron, gradient-descent trainer, OR-gate demo, and tests.
@@ -30,21 +30,33 @@ The companion repository uses its own semantic-style versioning. Book/publicatio
 - Part 013 companion: SGD, Momentum, RMSProp, Adam, weight decay, global gradient clipping, optimizer-state demo, and exact update-equation tests.
 - Part 014 companion: differentiable L1/L2 penalties, inverted dropout, early stopping, generalization-gap/norm monitoring, demo, and tests.
 - Part 015 companion: differentiable batch/layer normalization, trainable affine parameters, running evaluation moments, stable softmax, demo, and tests.
+- Part 016 companion: MSE/MAE/Huber, stable softplus/log-sum-exp, BCE/categorical cross-entropy from logits, output-design recommendations, demo, and tests.
+- Part 017 companion: constant, step, exponential, cosine, warmup/cosine schedules, validation plateau control, demo, and tests.
+- Part 018 companion: Xavier/Glorot, He/Kaiming, LeCun and educational initialization schemes, deterministic dense matrices, forward signal propagation statistics, demo, and tests.
+- Part 019 companion: global/per-layer gradient statistics, finite guards, gradient-to-parameter ratios, configurable gradient-health classification, demo, and tests.
+- Part 020 companion: deterministic experiment configuration fingerprints, optimizer/schedule integration, gradient telemetry, clipping, JSON experiment records, demo, and tests.
 - Part-by-part implementation status tracker for the 120-part curriculum.
+- Highlighted Gumroad badges and canonical store links across the repository homepage, support/publishing/metadata/release/contribution docs, issue/PR surfaces, and every implemented Part README.
 
 ### Changed
 - Modernized GitHub workflows to `actions/checkout@v7`, `actions/setup-python@v7`, and `actions/upload-artifact@v7`.
-- Expanded the README from repository planning notes into a runnable quick-start, implementation-status, automation, documentation, and licensing guide.
-- Advanced the README, roadmap, package API, validator, and implementation tracker through Parts 001–015.
-- Strengthened repository validation to require all implemented Part 001–015 directories, shared modules, and Part 011–015 milestone tests.
-- Queued Parts 016–020 as the next training-system engineering milestone.
+- Expanded the README from repository planning notes into a runnable quick-start, implementation-status, automation, documentation, licensing, and official-store guide.
+- Advanced the README, roadmap, package API, validator, and implementation tracker through Parts 001–020.
+- Strengthened repository validation to require all implemented Part 001–020 directories, shared modules, milestone tests, and the canonical `https://ramsandesh.gumroad.com` link on reader-facing surfaces.
+- Queued Parts 021–025 as the next visual-deep-learning milestone.
 - Clarified that the companion package/repository version is independent of the book publication version.
+- Kept Gumroad promotional links out of Python source/test logic while exposing the store consistently in reader-facing documentation.
 
 ### Verified
 - Pull request #5 exercised the original complete Repository Quality workflow successfully before merge.
 - Pull request #7 merged Parts 006–010 after 65 dependency-free tests passed on Python 3.10, 3.11, and 3.12, the isolated NumPy Part 003 job passed, and repository invariant validation passed.
-- The Parts 011–015 milestone is being delivered through a dedicated feature branch and will be merged only after its exact PR head passes the same multi-version CI gate.
+- Pull request #8 merged Parts 011–015 after all five Repository Quality jobs passed: validation, NumPy Part 003, and dependency-free tests on Python 3.10, 3.11, and 3.12.
+- Parts 016–020 and the repository-wide Gumroad rollout are being delivered on a dedicated feature branch and will merge only after the exact PR head passes the same CI gate.
 
 ## [0.1.0] - 2026-08-18
 
 Initial repository/documentation and Python package foundation for the NeuralForge Complete 120-Part Master Edition companion project.
+
+---
+
+**Official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
