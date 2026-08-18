@@ -1,0 +1,58 @@
+name: Release Readiness
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate repository
+        run: python tools/validate_repository.py
+
+      - name: Compile repository tools
+        run: python -m compileall -q tools
+
+      - name: Create tracked-file SHA-256 manifest
+        shell: bash
+        run: |
+          git ls-files -z \
+            | sort -z \
+            | xargs -0 sha256sum \
+            > NEURALFORGE_REPOSITORY_SHA256SUMS.txt
+
+      - name: Build source archive
+        shell: bash
+        run: |
+          git archive \
+            --format=zip \
+            --output=NeuralForge-Repository-${GITHUB_REF_NAME}.zip \
+            HEAD
+
+      - name: Upload release-readiness artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: neuralforge-release-readiness-${{ github.ref_name }}
+          path: |
+            NEURALFORGE_REPOSITORY_SHA256SUMS.txt
+            NeuralForge-Repository-${{ github.ref_name }}.zip
+          if-no-files-found: error
+          retention-days: 14
