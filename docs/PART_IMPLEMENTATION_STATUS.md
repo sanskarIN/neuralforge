@@ -22,12 +22,17 @@ This file tracks the open-source companion implementation for the 120-part Neura
 | 008 | Visualization and Exploratory Data Analysis | Implemented | quantiles, summaries, outliers, histograms, SVG scatter plots, demo, tests |
 | 009 | From a Biological Metaphor to an Artificial Neuron | Implemented | inspectable artificial neuron, activations/derivatives, trace demo, tests |
 | 010 | Build a Perceptron and Logistic Classifier from Scratch | Implemented | perceptron, logistic regression, comparison demo, separate unit tests |
-| 011 | Computational Graphs and Automatic Differentiation | Queued | Next implementation batch |
-| 012 | Backpropagation Through Multilayer Perceptrons | Queued | Next implementation batch |
-| 013 | Optimization Algorithms for Deep Neural Networks | Queued | Next implementation batch |
-| 014 | Regularization and Generalization in Deep Neural Networks | Queued | Next implementation batch |
-| 015 | Normalization and Training Stabilization in Deep Neural Networks | Queued | Next implementation batch |
-| 016–120 | Remaining NeuralForge curriculum | Planned | Add part-specific code, tests, labs, and READMEs incrementally |
+| 011 | Computational Graphs and Automatic Differentiation | Implemented | scalar reverse-mode autodiff, graph summary, gradient tests, demo |
+| 012 | Backpropagation Through Multilayer Perceptrons | Implemented | `Neuron`/`Layer`/`MLP`, losses, multilayer training demo, tests |
+| 013 | Optimization Algorithms for Deep Neural Networks | Implemented | SGD, Momentum, RMSProp, Adam, weight decay, gradient clipping, tests |
+| 014 | Regularization and Generalization in Deep Neural Networks | Implemented | L1/L2 penalties, inverted dropout, early stopping, generalization helpers, tests |
+| 015 | Normalization and Training Stabilization in Deep Neural Networks | Implemented | batch/layer normalization, running moments, stable softmax, tests |
+| 016 | Loss Functions and Output-Layer Design | Queued | Next implementation batch |
+| 017 | Learning-Rate Schedules and Optimization Control | Queued | Next implementation batch |
+| 018 | Initialization and Deep Signal Propagation | Queued | Next implementation batch |
+| 019 | Gradient Flow and Deep-Network Stability | Queued | Next implementation batch |
+| 020 | Training-Loop Engineering & Reproducible Experiment Runners | Queued | Next implementation batch |
+| 021–120 | Remaining NeuralForge curriculum | Planned | Add part-specific code, tests, labs, and READMEs incrementally |
 
 ## Repository-wide implementation requirements
 
@@ -43,6 +48,4 @@ A part should not be marked **Implemented** until it has, where applicable:
 
 ## Next batch
 
-Parts **011–015** will move the repository from single-neuron/classifier foundations into computational graphs, automatic differentiation, multilayer backpropagation, optimization algorithms, regularization, and normalization/training stabilization.
-
-That batch should remain framework-light where possible so learners can inspect the underlying mechanics before later framework-specific implementations.
+Parts **016–020** will turn the framework-light autodiff/training foundations into a more complete training system: objective/output-layer pairing, learning-rate schedules, initialization, gradient-flow diagnostics, and reproducible training-loop engineering.
