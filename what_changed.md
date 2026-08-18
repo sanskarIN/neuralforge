@@ -40,7 +40,9 @@
 ## Current merge gate
 
 - The combined Gumroad + Parts 016-020 milestone is developed on `feat/gumroad-and-parts-016-020`.
+- PR #13 is the formal review and CI merge gate for this milestone.
 - It must pass repository validation, dependency-free tests on Python 3.10, 3.11, and 3.12, and the isolated NumPy Part 003 job before merge.
+- No milestone code should be merged by bypassing these checks.
 
 ## Commit identity
 
