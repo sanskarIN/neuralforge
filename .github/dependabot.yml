@@ -13,3 +13,17 @@ updates:
     labels:
       - dependencies
       - github-actions
+
+  - package-ecosystem: pip
+    directory: "/parts/003-numpy-mastery"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "04:30"
+      timezone: "Asia/Kolkata"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(numpy)"
+    labels:
+      - dependencies
+      - python
