@@ -19,9 +19,9 @@ Goal: create organized companion material for Parts 001–120 with runnable exam
 
 Current progress:
 
-- **Parts 001–020 implemented** with runnable code, demos, and automated tests.
-- **Parts 021–025 queued** as the next visual-deep-learning batch.
-- **Parts 026–120 planned** for incremental implementation.
+- **Parts 001–025 implemented** with runnable code, demos, and automated tests.
+- **Parts 026–030 planned** as the next implementation block after canonical title-inventory synchronization.
+- **Parts 031–120 planned** for incremental implementation.
 
 See `docs/PART_IMPLEMENTATION_STATUS.md` for the detailed tracker.
 
@@ -40,6 +40,11 @@ Completed/in-progress work includes:
 - reproducibility policy and shared seeding utility;
 - scalar autodiff, multilayer backpropagation, optimizer-state, regularization, normalization, loss, schedule, initialization, gradient-flow, and training-runner tests;
 - deterministic experiment configuration fingerprints and JSON experiment records;
+- first-principles CNN convolution/pooling tests;
+- CNN architecture geometry, parameter/MAC, receptive-field, and residual compatibility tests;
+- efficient/mobile vision cost-model tests;
+- detection IoU/NMS/matching tests;
+- semantic/panoptic segmentation metric tests;
 - Dependabot monitoring for GitHub Actions and active Python dependencies;
 - pull-request validation before milestone merges.
 
@@ -64,9 +69,7 @@ Tagged public releases should begin only after a deliberate version decision and
 
 Maintain `CHANGELOG.md`, errata, dependency updates, security fixes, tests, compatibility notes, and durable project/store metadata. Permanent ebook copies should continue to avoid changeable social-media profile links.
 
-## Next implementation milestone
-
-Implement Parts **021–025**:
+## Completed vision milestone — Parts 021–025
 
 1. Convolutional Neural Networks from First Principles
 2. CNN Architecture Design: From LeNet to ResNet
@@ -74,7 +77,11 @@ Implement Parts **021–025**:
 4. Object Detection from First Principles to Real-Time Systems
 5. Image Segmentation: From Pixels to Panoptic Understanding
 
-This milestone should introduce visual deep learning progressively: first make convolution/pooling mechanics inspectable, then build architecture patterns and only afterward expand into efficiency, detection, and segmentation.
+The milestone introduces visual deep learning progressively: convolution/pooling mechanics first, architecture analysis second, then deployment-aware efficiency, detection geometry/post-processing, and segmentation metrics. Reusable APIs are grouped under `neuralforge.vision`.
+
+## Next implementation block
+
+Parts **026–030** remain planned. Their exact titles must be synchronized from the finalized canonical 120-part title inventory before the tracker/roadmap assigns names, preventing obsolete draft numbering from re-entering the repository.
 
 ---
 
