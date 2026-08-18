@@ -33,3 +33,7 @@ python parts/002-python-essentials/tensor_shape_demo.py
 ```bash
 PYTHONPATH=src python -m unittest tests.test_tensor_basics -v
 ```
+
+---
+
+**Official Ram Sandesh Gumroad Storefront:** **https://ramsandesh.gumroad.com**
