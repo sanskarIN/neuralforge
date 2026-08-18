@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use the NeuralForge companion repository, please cite the project and its associated book."
+title: "NeuralForge: Deep Learning from Zero to Mastery — Companion Repository"
+type: software
+authors:
+  - name: "Ram Sandesh"
+repository-code: "https://github.com/sanskarIN/neuralforge"
+license: MIT
+keywords:
+  - deep learning
+  - machine learning
+  - neural networks
+  - artificial intelligence
+  - education
+abstract: >-
+  Open-source companion repository for the Complete 120-Part Master Edition
+  of NeuralForge - Deep Learning from Zero to Mastery, containing practical
+  code, labs, tests, reference implementations, reproducibility resources,
+  and supporting documentation.
+preferred-citation:
+  type: book
+  title: "NeuralForge - Deep Learning from Zero to Mastery"
+  authors:
+    - name: "Ram Sandesh"
+  year: 2026
