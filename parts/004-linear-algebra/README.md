@@ -34,3 +34,7 @@ PYTHONPATH=src python -m unittest tests.test_linear_algebra -v
 ```
 
 The reusable implementation lives in `src/neuralforge/linear_algebra.py`.
+
+---
+
+**NeuralForge / Ram Sandesh official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
