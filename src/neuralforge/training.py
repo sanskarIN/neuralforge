@@ -62,10 +62,16 @@ class ExperimentConfig:
             raise ValueError("min_learning_rate cannot exceed learning_rate")
         if isinstance(self.warmup_epochs, bool) or not isinstance(self.warmup_epochs, int) or self.warmup_epochs < 0:
             raise ValueError("warmup_epochs must be a non-negative integer")
-        if self.schedule == "warmup_cosine" and not 0 < self.warmup_epochs < self.epochs:
-            raise ValueError("warmup_cosine requires 0 < warmup_epochs < epochs")
+        if self.schedule == "warmup_cosine" and not 0 < self.warmup_epochs < self.epochs - 1:
+            raise ValueError(
+                "warmup_cosine requires 0 < warmup_epochs < epochs - 1 so at least one decay step remains"
+            )
+        if self.hidden_activation not in ("linear", "tanh", "relu", "sigmoid"):
+            raise ValueError("unsupported hidden_activation")
         if isinstance(self.seed, bool) or not isinstance(self.seed, int):
             raise TypeError("seed must be an integer")
+        if not 0 <= self.seed <= 2**32 - 1:
+            raise ValueError("seed must be between 0 and 2**32 - 1")
         if self.gradient_clip_norm is not None:
             value = float(self.gradient_clip_norm)
             if not math.isfinite(value) or value <= 0.0:
@@ -192,7 +198,7 @@ def _learning_rate(config: ExperimentConfig, epoch_index: int) -> float:
         config.learning_rate,
         epoch_index,
         warmup_steps=config.warmup_epochs,
-        total_steps=config.epochs,
+        total_steps=total_steps,
         start_lr=config.min_learning_rate,
         min_lr=config.min_learning_rate,
     )
