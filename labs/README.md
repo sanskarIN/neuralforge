@@ -14,3 +14,7 @@ Each lab should include:
 - License/attribution notes for any third-party material
 
 Labs should use safe, synthetic, or properly licensed data whenever possible and must not commit secrets or private user data.
+
+---
+
+**Official Ram Sandesh Gumroad Storefront:** **https://ramsandesh.gumroad.com**
