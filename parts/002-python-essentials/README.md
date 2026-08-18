@@ -33,3 +33,7 @@ python parts/002-python-essentials/tensor_shape_demo.py
 ```bash
 PYTHONPATH=src python -m unittest tests.test_tensor_basics -v
 ```
+
+---
+
+**NeuralForge / Ram Sandesh official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
