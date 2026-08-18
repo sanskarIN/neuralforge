@@ -67,13 +67,13 @@ def confusion_matrix(
     expected = _mask(target, name="target")
     _same_shape(predicted, expected)
 
-    observed = [
-        label
-        for rows in (predicted, expected)
-        for row in rows
-        for label in row
-        if label != ignore_index
-    ]
+    observed: list[int] = []
+    for predicted_row, target_row in zip(predicted, expected):
+        for predicted_label, target_label in zip(predicted_row, target_row):
+            if target_label == ignore_index:
+                continue
+            observed.extend((predicted_label, target_label))
+
     if num_classes is None:
         if not observed:
             raise ValueError("cannot infer classes when every pixel is ignored")
