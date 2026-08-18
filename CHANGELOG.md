@@ -25,21 +25,25 @@ The companion repository uses its own semantic-style versioning. Book/publicatio
 - Part 008 companion: quantiles, descriptive summaries, IQR outlier detection, histograms, self-contained SVG scatter plots, demo, and tests.
 - Part 009 companion: inspectable artificial-neuron traces, multiple activations, activation derivatives, demo, and tests.
 - Part 010 companion: from-scratch perceptron and logistic-regression modules, convergence/loss histories, comparison demo, and separate tests.
+- Part 011 companion: scalar reverse-mode automatic differentiation, computational-graph traversal, nonlinear operations, graph summaries, demo, and derivative tests.
+- Part 012 companion: trainable `Neuron`, `Layer`, and `MLP` modules backed by scalar autodiff, differentiable losses, end-to-end training demo, and tests.
+- Part 013 companion: SGD, Momentum, RMSProp, Adam, weight decay, global gradient clipping, optimizer-state demo, and exact update-equation tests.
+- Part 014 companion: differentiable L1/L2 penalties, inverted dropout, early stopping, generalization-gap/norm monitoring, demo, and tests.
+- Part 015 companion: differentiable batch/layer normalization, trainable affine parameters, running evaluation moments, stable softmax, demo, and tests.
 - Part-by-part implementation status tracker for the 120-part curriculum.
 
 ### Changed
 - Modernized GitHub workflows to `actions/checkout@v7`, `actions/setup-python@v7`, and `actions/upload-artifact@v7`.
 - Expanded the README from repository planning notes into a runnable quick-start, implementation-status, automation, documentation, and licensing guide.
-- Advanced the README, roadmap, and implementation tracker from Parts 001–005 to Parts 001–010.
-- Queued Parts 011–015 as the next framework-light neural-network mechanics milestone.
+- Advanced the README, roadmap, package API, validator, and implementation tracker through Parts 001–015.
+- Strengthened repository validation to require all implemented Part 001–015 directories, shared modules, and Part 011–015 milestone tests.
+- Queued Parts 016–020 as the next training-system engineering milestone.
 - Clarified that the companion package/repository version is independent of the book publication version.
 
 ### Verified
-- Pull request #5 exercised the complete Repository Quality workflow successfully before merge.
-- Dependency-free tests passed across Python 3.10, 3.11, and 3.12.
-- Part 003 NumPy tests passed in their isolated Python 3.12 CI environment.
-- Repository invariant validation passed.
-- Parts 006–010 are being delivered through a dedicated feature branch and will be merged only after the upgraded v7 workflow passes on the pull-request path.
+- Pull request #5 exercised the original complete Repository Quality workflow successfully before merge.
+- Pull request #7 merged Parts 006–010 after 65 dependency-free tests passed on Python 3.10, 3.11, and 3.12, the isolated NumPy Part 003 job passed, and repository invariant validation passed.
+- The Parts 011–015 milestone is being delivered through a dedicated feature branch and will be merged only after its exact PR head passes the same multi-version CI gate.
 
 ## [0.1.0] - 2026-08-18
 

@@ -57,6 +57,11 @@ IMPLEMENTED_PART_DIRS = (
     "parts/008-visualization-eda",
     "parts/009-artificial-neuron",
     "parts/010-perceptron-logistic",
+    "parts/011-autograd",
+    "parts/012-backpropagation",
+    "parts/013-optimization",
+    "parts/014-regularization",
+    "parts/015-normalization-stability",
 )
 
 REQUIRED_SOURCE_MODULES = (
@@ -72,6 +77,19 @@ REQUIRED_SOURCE_MODULES = (
     "src/neuralforge/neuron.py",
     "src/neuralforge/perceptron.py",
     "src/neuralforge/logistic_regression.py",
+    "src/neuralforge/autograd.py",
+    "src/neuralforge/nn.py",
+    "src/neuralforge/optim.py",
+    "src/neuralforge/regularization.py",
+    "src/neuralforge/normalization.py",
+)
+
+REQUIRED_MILESTONE_TESTS = (
+    "tests/test_autograd.py",
+    "tests/test_nn.py",
+    "tests/test_optim.py",
+    "tests/test_regularization.py",
+    "tests/test_normalization.py",
 )
 
 TEXT_SUFFIXES = {
@@ -112,8 +130,7 @@ def validate_implemented_parts(errors: list[str]) -> None:
             continue
         if not (directory / "README.md").is_file():
             errors.append(f"implemented part is missing README.md: {relative}")
-        python_files = list(directory.glob("*.py"))
-        if not python_files:
+        if not list(directory.glob("*.py")):
             errors.append(f"implemented part has no runnable Python material: {relative}")
 
 
@@ -131,6 +148,10 @@ def main() -> int:
     for relative in REQUIRED_SOURCE_MODULES:
         if not (ROOT / relative).is_file():
             errors.append(f"missing required source module: {relative}")
+
+    for relative in REQUIRED_MILESTONE_TESTS:
+        if not (ROOT / relative).is_file():
+            errors.append(f"missing milestone test module: {relative}")
 
     validate_implemented_parts(errors)
 
@@ -160,6 +181,7 @@ def main() -> int:
     print(f"Checked {len(REQUIRED_FILES)} required files.")
     print(f"Checked {len(REQUIRED_DIRS)} required directories.")
     print(f"Checked {len(REQUIRED_SOURCE_MODULES)} shared source modules.")
+    print(f"Checked {len(REQUIRED_MILESTONE_TESTS)} milestone test modules.")
     print(f"Checked {len(IMPLEMENTED_PART_DIRS)} implemented part directories.")
     return 0
 

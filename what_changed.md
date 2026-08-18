@@ -19,28 +19,26 @@
 - Added a repository invariant validator and GitHub Actions Repository Quality workflow.
 - Added a Python package foundation under `src/neuralforge/`.
 - Added reproducibility helpers and dependency-free educational utilities.
-- Implemented companion material for Parts 001-010 with runnable demos and automated tests.
-- Part 001 includes a logistic neuron, numerically stable sigmoid/BCE, full-batch gradient descent, and OR-gate training demo.
-- Part 002 includes tensor-shape inference, flattening, element counting, and reshape validation.
-- Part 003 includes an isolated NumPy 2.5.1 environment, standardization, dense-layer vectorization, stable softmax, demo, and tests.
-- Part 004 includes dependency-free dot products, norms, cosine similarity, transpose, matrix multiplication, and outer products.
-- Part 005 includes numerical derivatives, numerical gradients, and analytical gradient checking.
-- Part 006 adds descriptive statistics, covariance/correlation, normal density, Bernoulli likelihood, and reproducible bootstrap intervals.
-- Part 007 adds disjoint/stratified train-validation-test splitting and training-only feature standardization to demonstrate leakage-resistant evaluation.
-- Part 008 adds quantiles, numeric summaries, IQR outlier detection, histograms, and self-contained SVG scatter-plot generation without another plotting dependency.
-- Part 009 adds an inspectable artificial neuron with weighted-contribution traces, common activations, and activation derivatives.
-- Part 010 adds separate from-scratch perceptron and logistic-regression implementations with convergence/loss histories and a comparison demo.
-- Advanced the 120-part implementation tracker: Parts 001-010 are implemented and Parts 011-015 are queued next.
-- Strengthened repository validation so every implemented Part 001-010 must retain a README and runnable Python material, and the required shared modules must exist.
+- Implemented companion material for Parts 001-015 with runnable demos and automated tests.
+- Parts 001-005 cover the dependency-free foundations: neurons/classification, Python tensor structure, NumPy vectorization, linear algebra, and calculus/gradient checking.
+- Parts 006-010 add statistics, leakage-resistant data preparation, EDA/visualization, inspectable artificial neurons, perceptron training, and logistic regression.
+- Part 011 adds a scalar reverse-mode autodiff engine with computational-graph tracking, topological backward traversal, shared-subgraph accumulation, nonlinear operations, and graph summaries.
+- Part 012 builds `Neuron`, `Layer`, and `MLP` modules directly on that autodiff engine, with differentiable losses and end-to-end multilayer training.
+- Part 013 adds stateful SGD, Momentum, RMSProp, Adam, optional weight decay, global gradient clipping, and exact optimizer-state/update tests.
+- Part 014 adds differentiable L1/L2 penalties, deterministic inverted dropout, early stopping, generalization-gap monitoring, and parameter-norm monitoring.
+- Part 015 adds differentiable batch/layer normalization, trainable affine normalization parameters, running evaluation moments, and numerically stable scalar softmax.
+- Every Part 011-015 has a dedicated README, runnable demo, reusable source module, and automated tests.
+- Advanced the 120-part implementation tracker: Parts 001-015 are implemented and Parts 016-020 are queued next.
+- Parts 016-020 are queued for loss/output-layer design, learning-rate schedules, initialization/signal propagation, gradient-flow diagnostics, and reproducible training-loop engineering.
+- Strengthened repository validation so every implemented Part 001-015 must retain a README and runnable Python material; all shared source modules and Part 011-015 milestone tests are required as well.
 - Added Dependabot monitoring for GitHub Actions and the active Part 003 Python dependency.
 - Added a non-destructive Release Readiness workflow that validates, tests, generates SHA-256 manifests, and creates source archives without automatically publishing a GitHub Release.
 - PR #5 exercised the original pull-request CI path successfully on Python 3.10/3.11/3.12 plus the NumPy Part 003 job before merge.
-- The Python 3.11 PR #5 job executed 31 dependency-free tests successfully; equivalent core suites passed on Python 3.10 and 3.12.
+- PR #7 merged the completed Parts 006-010 milestone after 65 dependency-free tests passed on Python 3.10/3.11/3.12, the isolated NumPy Part 003 job passed, and the strengthened repository validator passed.
 - Modernized workflow dependencies to `actions/checkout@v7`, `actions/setup-python@v7`, and `actions/upload-artifact@v7` after CI exposed old Node-runtime deprecation warnings.
-- PR #7 is the validation/merge gate for the completed Parts 006-010 milestone and the upgraded v7 Actions workflow.
-- A concurrent PR #6 merged the earlier Part 006 slice while the feature branch continued; PR #7 contains the remaining milestone work and avoids reimplementing that already-merged slice.
-- Refreshed README, roadmap, changelog, implementation tracker, and package API to reflect the current repository state.
-- Aligned the companion Python/repository baseline at version `0.1.0`; the book's Publication Version 1.0 remains a separate lifecycle.
+- Refreshed README, roadmap, changelog, implementation tracker, validator, and package API through Part 015.
+- The companion Python/repository baseline remains version `0.1.0`; the book's Publication Version 1.0 remains a separate lifecycle.
+- The Parts 011-015 feature branch will be merged only after its exact PR head passes the full Repository Quality matrix.
 
 ## Commit identity
 
