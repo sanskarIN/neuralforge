@@ -45,3 +45,7 @@ Exponentiating very large logits directly can overflow. Subtracting the maximum 
 ## Stabilization is layered
 
 Normalization is only one training-stability tool. Good initialization, suitable learning rates, gradient monitoring/clipping, finite-value checks, and correctly scaled inputs remain important. Later NeuralForge parts build these ideas into larger training systems.
+
+---
+
+**NeuralForge / Ram Sandesh official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
