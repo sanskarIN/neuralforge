@@ -21,7 +21,7 @@ The repository is being built as a practical learning system: runnable code, tes
 
 ## Current implementation status
 
-Parts **001–015** now have runnable companion implementations and automated tests:
+Parts **001–020** now have runnable companion implementations and automated tests:
 
 | Part | Topic | Companion focus |
 |---:|---|---|
@@ -40,8 +40,13 @@ Parts **001–015** now have runnable companion implementations and automated te
 | 013 | Optimization | SGD, Momentum, RMSProp, Adam, weight decay, global gradient clipping |
 | 014 | Regularization | L1/L2, inverted dropout, early stopping, generalization monitoring |
 | 015 | Normalization & Stability | Batch/layer normalization, running moments, trainable affine terms, stable softmax |
+| 016 | Loss & Output Design | logits-first BCE/categorical CE, MSE/MAE/Huber, output-objective recommendations |
+| 017 | Learning-Rate Control | constant/step/exponential/cosine/warmup schedules and plateau reduction |
+| 018 | Initialization & Signal Propagation | Xavier/He/LeCun schemes and seeded layerwise activation statistics |
+| 019 | Gradient Flow | finite checks, global/per-layer statistics, gradient/parameter ratio, health diagnostics |
+| 020 | Training-Loop Engineering | deterministic experiment configs, optimizer/schedule integration, gradient telemetry, JSON run records |
 
-See [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) for the 120-part implementation tracker.
+See [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) for the 120-part implementation tracker. Parts **021–025** are the next queued visual-deep-learning milestone.
 
 ## Quick start
 
@@ -56,14 +61,14 @@ python -m unittest discover -s tests -p "test_*.py" -v
 For imports when running examples directly from the repository:
 
 ```bash
-PYTHONPATH=src python parts/011-autograd/autograd_demo.py
+PYTHONPATH=src python parts/020-training-loop-engineering/experiment_demo.py
 ```
 
 PowerShell:
 
 ```powershell
 $env:PYTHONPATH = "src"
-python parts/011-autograd/autograd_demo.py
+python parts/020-training-loop-engineering/experiment_demo.py
 ```
 
 The core companion package supports Python **3.10+**. Part 003 intentionally isolates its current NumPy dependency and uses Python **3.12+**.
@@ -72,12 +77,12 @@ The core companion package supports Python **3.10+**. Part 003 intentionally iso
 
 The `Repository Quality` workflow checks:
 
-- repository invariants and durable-link policy;
+- repository invariants, canonical GitHub destination, Gumroad visibility, and durable-link policy;
 - whitespace and Python compilation;
 - dependency-free unit tests on Python 3.10, 3.11, and 3.12;
 - the isolated Part 003 NumPy test suite on Python 3.12.
 
-Dependabot monitors GitHub Actions and the Part 003 Python dependency. A separate non-destructive Release Readiness workflow validates the repository, runs tests, generates SHA-256 checksums, and builds a source archive without automatically publishing a release.
+The repository validator requires every implemented Part README to retain the canonical Gumroad store link while keeping promotional content out of Python source/test logic. Dependabot monitors GitHub Actions and the Part 003 Python dependency. A separate non-destructive Release Readiness workflow validates the repository, runs tests, generates SHA-256 checksums, and builds a source archive without automatically publishing a release.
 
 ## Repository layout
 
@@ -109,7 +114,7 @@ docs/          Roadmap, policies, metadata, publishing and QA docs
 
 [![Visit Ram Sandesh on Gumroad](https://img.shields.io/badge/Visit%20Store-ramsandesh.gumroad.com-FF90E8?style=for-the-badge&logo=gumroad&logoColor=000000)](https://ramsandesh.gumroad.com)
 
-The official store destination for NeuralForge publication releases and other Ram Sandesh digital products is **https://ramsandesh.gumroad.com**. Repository documentation should use this canonical store URL so readers can find the current storefront from GitHub.
+The official store destination for NeuralForge publication releases and other Ram Sandesh digital products is **https://ramsandesh.gumroad.com**. Repository documentation uses this canonical store-home URL so readers have a durable storefront destination.
 
 ## Licensing
 
