@@ -2,6 +2,12 @@
 
 NeuralForge support is organized by the type of request so questions remain searchable and maintainable.
 
+## Official Gumroad storefront
+
+**https://ramsandesh.gumroad.com**
+
+Use the official Ram Sandesh Gumroad storefront for available digital publications and storefront releases. See `STORE.md` for the repository/storefront boundary.
+
 ## Bugs
 
 Use the repository bug-report issue template. Include the smallest reproducible example, environment details, expected behavior, and actual behavior.
@@ -24,10 +30,11 @@ Follow `docs/ERRATA_POLICY.md`. Keep corrections concise and identify the exact 
 
 ## Publication purchase/store support
 
-Storefront-specific payment, refund, tax, and account issues should be handled through the storefront used for the purchase. Repository issues are for NeuralForge technical/project matters rather than payment processing.
+For NeuralForge products obtained through Gumroad, the official storefront destination is **https://ramsandesh.gumroad.com**. Storefront-specific payment, refund, tax, download-access, and account issues should be handled through the storefront used for the purchase. Repository issues are for NeuralForge technical/project matters rather than payment processing.
 
 ## Durable contact policy
 
-Permanent publication artifacts intentionally avoid X/Twitter profile URLs because social handles can change. The canonical project destination is:
+Permanent publication artifacts intentionally avoid X/Twitter profile URLs because social handles can change. Durable destinations are:
 
-`https://github.com/sanskarIN/neuralforge`
+- Project repository: `https://github.com/sanskarIN/neuralforge`
+- Official Gumroad storefront: **https://ramsandesh.gumroad.com**
