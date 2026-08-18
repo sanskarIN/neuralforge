@@ -31,8 +31,30 @@ jobs:
       - name: Check whitespace errors
         run: git diff --check HEAD~1 HEAD || git diff --check
 
-      - name: Compile repository tools
-        run: python -m compileall -q tools
+      - name: Compile repository Python
+        run: python -m compileall -q tools src tests
 
       - name: Validate repository invariants
         run: python tools/validate_repository.py
+
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Run standard-library unit tests
+        env:
+          PYTHONPATH: src
+        run: python -m unittest discover -s tests -p "test_*.py" -v
