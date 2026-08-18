@@ -32,11 +32,11 @@ This file tracks the open-source companion implementation for the 120-part Neura
 | 018 | Initialization and Deep Signal Propagation | Implemented | Xavier/He/LeCun initialization, seeded matrices, forward-signal statistics, tests |
 | 019 | Gradient Flow and Deep-Network Stability | Implemented | global/per-layer gradient stats, finite checks, health classification, diagnostics demo, tests |
 | 020 | Training-Loop Engineering & Reproducible Experiment Runners | Implemented | experiment config/fingerprint, schedules, optimizer integration, diagnostics, JSON records, tests |
-| 021 | Convolutional Neural Networks from First Principles | Queued | Next implementation batch |
-| 022 | CNN Architecture Design: From LeNet to ResNet | Queued | Next implementation batch |
-| 023 | Efficient CNNs & Mobile Vision | Queued | Next implementation batch |
-| 024 | Object Detection from First Principles to Real-Time Systems | Queued | Next implementation batch |
-| 025 | Image Segmentation: From Pixels to Panoptic Understanding | Queued | Next implementation batch |
+| 021 | Convolutional Neural Networks from First Principles | Implemented | convolution/cross-correlation, SAME padding, stride/dilation, max/average pooling, demo, tests |
+| 022 | CNN Architecture Design: From LeNet to ResNet | Implemented | stage shapes, parameters, MACs, receptive fields, grouped convolution, residual compatibility, tests |
+| 023 | Efficient CNNs & Mobile Vision | Implemented | standard/depthwise/inverted-residual cost models, precision model-size estimates, width scaling, tests |
+| 024 | Object Detection from First Principles to Real-Time Systems | Implemented | box geometry, IoU, class-aware NMS, one-to-one matching, precision/recall, tests |
+| 025 | Image Segmentation: From Pixels to Panoptic Understanding | Implemented | confusion matrices, pixel accuracy, IoU/Dice, ignore labels, PQ/SQ/RQ, tests |
 | 026–120 | Remaining NeuralForge curriculum | Planned | Add part-specific code, tests, labs, and READMEs incrementally |
 
 ## Repository-wide implementation requirements
@@ -52,9 +52,11 @@ A part should not be marked **Implemented** until it has, where applicable:
 7. CI coverage or a documented reason why automated execution is impractical;
 8. the canonical reader-facing Gumroad destination in its README: `https://ramsandesh.gumroad.com`.
 
-## Next batch
+## Vision milestone
 
-Parts **021–025** move the companion repository into visual deep learning: convolution mechanics, CNN architecture design, efficient/mobile vision, object detection, and image segmentation. The implementation should preserve the current pattern of inspectable foundations before larger framework-specific stacks are introduced.
+Parts **021–025** establish a dependency-free, inspectable computer-vision foundation: convolution mechanics, architecture/cost reasoning, efficient/mobile design, object-detection geometry/post-processing, and semantic/panoptic segmentation metrics.
+
+The reusable vision APIs are grouped under the `neuralforge.vision` namespace. Larger framework-specific vision training stacks can build on these tested primitives without replacing the underlying concepts.
 
 ---
 
