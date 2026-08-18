@@ -45,3 +45,7 @@ A typical step is:
 ## Important distinction
 
 An optimizer can improve how training navigates the loss surface, but it does not fix incorrect data, leakage, a mismatched objective, or an unsuitable model architecture. Optimization quality and generalization quality are related but different concerns.
+
+---
+
+**Official Ram Sandesh Gumroad Storefront:** **https://ramsandesh.gumroad.com**
