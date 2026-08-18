@@ -45,3 +45,7 @@ A typical step is:
 ## Important distinction
 
 An optimizer can improve how training navigates the loss surface, but it does not fix incorrect data, leakage, a mismatched objective, or an unsuitable model architecture. Optimization quality and generalization quality are related but different concerns.
+
+---
+
+**NeuralForge / Ram Sandesh official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
