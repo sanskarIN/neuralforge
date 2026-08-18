@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security reports
+    url: https://github.com/sanskarIN/neuralforge/security
+    about: Please review SECURITY.md and use GitHub security features for sensitive reports.
+  - name: General project discussion
+    url: https://github.com/sanskarIN/neuralforge/discussions
+    about: Use Discussions when enabled for questions and broad project ideas that are not actionable issues.
