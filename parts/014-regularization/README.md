@@ -50,3 +50,7 @@ During training, activations are independently dropped with probability `p`; kep
 Early stopping uses validation behavior, not training loss alone. The helper signals when validation loss has failed to improve by `min_delta` for `patience` consecutive updates.
 
 Regularization is not a substitute for a leakage-free split: validation/test information must still remain outside training-data fitting and preprocessing state.
+
+---
+
+**NeuralForge / Ram Sandesh official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
