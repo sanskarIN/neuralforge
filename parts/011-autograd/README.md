@@ -43,3 +43,7 @@ A training loss is usually one scalar produced from many parameters. Reverse-mod
 ## Educational scope
 
 This scalar engine is deliberately small. Production frameworks operate on tensors, optimize graph execution, support devices and mixed precision, and handle far more operations. The purpose here is to understand the mechanism that those systems automate.
+
+---
+
+**NeuralForge / Ram Sandesh official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
