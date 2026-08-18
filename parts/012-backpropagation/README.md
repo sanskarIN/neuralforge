@@ -48,3 +48,7 @@ For each batch, the demo performs the same conceptual sequence used by larger fr
 6. build a fresh graph for the next step.
 
 Part 013 replaces the basic update step with reusable optimizer classes and optimizer state.
+
+---
+
+**Official Ram Sandesh Gumroad Storefront:** **https://ramsandesh.gumroad.com**
