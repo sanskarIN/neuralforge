@@ -32,3 +32,7 @@ PYTHONPATH=src python -m unittest tests.test_calculus -v
 ```
 
 The reusable implementation lives in `src/neuralforge/calculus.py`.
+
+---
+
+**NeuralForge / Ram Sandesh official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
