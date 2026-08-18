@@ -35,23 +35,30 @@ The companion repository uses its own semantic-style versioning. Book/publicatio
 - Part 018 companion: Xavier/Glorot, He/Kaiming, LeCun and educational initialization schemes, deterministic dense matrices, forward signal propagation statistics, demo, and tests.
 - Part 019 companion: global/per-layer gradient statistics, finite guards, gradient-to-parameter ratios, configurable gradient-health classification, demo, and tests.
 - Part 020 companion: deterministic experiment configuration fingerprints, optimizer/schedule integration, gradient telemetry, clipping, JSON experiment records, demo, and tests.
+- Part 021 companion: dependency-free cross-correlation/convolution, SAME/explicit padding, stride/dilation geometry, max/average pooling, demo, and tests.
+- Part 022 companion: CNN stage-shape analysis, parameter/MAC counts, receptive-field growth, grouped convolution, residual compatibility, LeNet-style report, demo, and tests.
+- Part 023 companion: standard/depthwise-separable/inverted-residual cost models, precision-dependent model-size estimates, width scaling, demo, and tests.
+- Part 024 companion: validated bounding boxes, coordinate conversion, IoU matrices, class-aware NMS, score-ordered one-to-one matching, precision/recall, demo, and tests.
+- Part 025 companion: semantic confusion matrices, ignore-label handling, pixel accuracy, IoU/Dice, binary mask metrics, PQ/SQ/RQ decomposition, demo, and tests.
+- Public `neuralforge.vision` namespace aggregating the reusable APIs for Parts 021–025.
 - Part-by-part implementation status tracker for the 120-part curriculum.
 - Highlighted Gumroad badges and canonical store links across the repository homepage, support/publishing/metadata/release/contribution docs, issue/PR surfaces, and every implemented Part README.
 
 ### Changed
 - Modernized GitHub workflows to `actions/checkout@v7`, `actions/setup-python@v7`, and `actions/upload-artifact@v7`.
 - Expanded the README from repository planning notes into a runnable quick-start, implementation-status, automation, documentation, licensing, and official-store guide.
-- Advanced the README, roadmap, package API, validator, and implementation tracker through Parts 001–020.
-- Strengthened repository validation to require all implemented Part 001–020 directories, shared modules, milestone tests, and the canonical `https://ramsandesh.gumroad.com` link on reader-facing surfaces.
-- Queued Parts 021–025 as the next visual-deep-learning milestone.
-- Clarified that the companion package/repository version is independent of the book publication version.
+- Advanced the README, roadmap, validator, and implementation tracker through Parts 001–025.
+- Strengthened repository validation to require all implemented Part 001–025 directories, shared modules, milestone tests, and the canonical `https://ramsandesh.gumroad.com` link on reader-facing surfaces.
+- Preserved the companion package baseline version at `0.1.0` while extending the public vision namespace.
 - Kept Gumroad promotional links out of Python source/test logic while exposing the store consistently in reader-facing documentation.
+- Kept Parts 026–030 titles unassigned in the roadmap until the finalized canonical title inventory is synchronized, avoiding obsolete draft numbering.
 
 ### Verified
 - Pull request #5 exercised the original complete Repository Quality workflow successfully before merge.
 - Pull request #7 merged Parts 006–010 after 65 dependency-free tests passed on Python 3.10, 3.11, and 3.12, the isolated NumPy Part 003 job passed, and repository invariant validation passed.
 - Pull request #8 merged Parts 011–015 after all five Repository Quality jobs passed: validation, NumPy Part 003, and dependency-free tests on Python 3.10, 3.11, and 3.12.
-- Parts 016–020 and the repository-wide Gumroad rollout are being delivered on a dedicated feature branch and will merge only after the exact PR head passes the same CI gate.
+- PR #13 is the formal merge gate for Parts 016–020 plus the repository-wide Gumroad rollout; it remains unmerged until its exact-head CI gate is available and passes.
+- Parts 021–025 are developed on a stacked feature branch from PR #13 so progress can continue without bypassing the earlier milestone's merge policy.
 
 ## [0.1.0] - 2026-08-18
 
