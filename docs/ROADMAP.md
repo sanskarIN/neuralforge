@@ -20,9 +20,9 @@ Goal: create organized companion material for Parts 001–120 with runnable exam
 
 Current progress:
 
-- **Parts 001–015 implemented** with runnable code, demos, and automated tests.
-- **Parts 016–020 queued** as the next training-system engineering batch.
-- **Parts 021–120 planned** for incremental implementation.
+- **Parts 001–020 implemented** with runnable code, demos, and automated tests.
+- **Parts 021–025 queued** as the first computer-vision/CNN implementation batch.
+- **Parts 026–120 planned** for incremental implementation.
 
 See `docs/PART_IMPLEMENTATION_STATUS.md` for the detailed tracker.
 
@@ -34,13 +34,14 @@ Add practical cross-part labs, reference implementations, legally redistributabl
 
 Completed/in-progress work includes:
 
-- repository invariant validator that enforces Parts 001–015 implementation structure;
+- repository invariant validator that enforces Parts 001–020 implementation structure;
 - canonical GitHub repository and Gumroad storefront checks on key public surfaces;
 - Python compilation checks;
 - dependency-free unit-test matrix on Python 3.10, 3.11, and 3.12;
 - isolated NumPy Part 003 tests on Python 3.12;
 - reproducibility policy and shared seeding utility;
-- scalar autodiff, multilayer backpropagation, optimizer-state, regularization, and normalization tests;
+- scalar autodiff, multilayer backpropagation, optimizer-state, regularization, normalization, loss-design, schedule-control, initialization, gradient-flow, and experiment-runner tests;
+- SHA-256 configuration/data/run fingerprints in the Part 020 educational experiment runner;
 - Dependabot monitoring for GitHub Actions and active Python dependencies;
 - pull-request validation before milestone merges.
 
@@ -67,15 +68,15 @@ Maintain `CHANGELOG.md`, errata, dependency updates, security fixes, tests, comp
 
 ## Next implementation milestone
 
-Implement Parts **016–020**:
+Implement Parts **021–025**:
 
-1. Loss Functions and Output-Layer Design
-2. Learning-Rate Schedules and Optimization Control
-3. Initialization and Deep Signal Propagation
-4. Gradient Flow and Deep-Network Stability
-5. Training-Loop Engineering & Reproducible Experiment Runners
+1. Convolutional Neural Networks from First Principles
+2. CNN Architecture Design: From LeNet to ResNet
+3. Efficient CNNs & Mobile Vision
+4. Object Detection from First Principles to Real-Time Systems
+5. Image Segmentation: From Pixels to Panoptic Understanding
 
-This milestone should convert the current framework-light neural-network mechanics into a more systematic training stack with objective/output pairing, schedule control, signal propagation diagnostics, and reproducible experiment orchestration.
+This milestone should begin with inspectable convolution/pooling primitives, then grow into architecture design and task-level computer-vision systems while keeping dependency/provenance boundaries explicit.
 
 ---
 
