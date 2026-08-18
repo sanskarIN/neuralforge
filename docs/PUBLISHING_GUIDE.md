@@ -1,8 +1,16 @@
 # NeuralForge Publishing Guide
 
+[![Publish and sell via Gumroad](https://img.shields.io/badge/Gumroad-Primary%20Direct%20Store-FF90E8?style=for-the-badge&logo=gumroad&logoColor=000000)](https://ramsandesh.gumroad.com)
+
 This repository accompanies **NeuralForge - Deep Learning from Zero to Mastery**, Complete 120-Part Master Edition, by **Ram Sandesh**.
 
 The full publication-package guide is maintained with the release artifacts. This repository document records the canonical publishing policy and platform workflow.
+
+## Official direct storefront
+
+**Ram Sandesh on Gumroad: https://ramsandesh.gumroad.com**
+
+Use this as the primary direct storefront destination in NeuralForge GitHub documentation and reader-facing release notes.
 
 ## Canonical release files
 
@@ -14,7 +22,7 @@ The full publication-package guide is maintained with the release artifacts. Thi
 
 ## Recommended publication order
 
-1. Gumroad for a direct PDF/EPUB bundle.
+1. **Gumroad — `https://ramsandesh.gumroad.com` — primary direct PDF/EPUB bundle storefront.**
 2. Amazon KDP for Kindle distribution.
 3. Google Play Books with EPUB plus PDF when possible.
 4. Kobo Writing Life with EPUB.
@@ -31,6 +39,7 @@ Do not distribute the same edition to the same retailer both directly and throug
 - Edition: `Complete 120-Part Master Edition`
 - Author: `Ram Sandesh`
 - Companion repository: `https://github.com/sanskarIN/neuralforge`
+- **Official Gumroad store: `https://ramsandesh.gumroad.com`**
 - X/Twitter: intentionally omitted
 
 ## Release workflow
@@ -40,9 +49,9 @@ Do not distribute the same edition to the same retailer both directly and throug
 3. Scan all outputs for stale social links.
 4. Validate PDF navigation and EPUB structure.
 5. Check representative early, middle, and final parts.
-6. Update metadata, changelog, and checksums.
-7. Upload to storefronts.
-8. Record live listing URLs in a private release ledger rather than hard-coding changeable links into the ebook.
+6. Update metadata, changelog, checksums, and canonical Gumroad references.
+7. Upload the direct-sale bundle to the official Gumroad store and then publish to other selected storefronts.
+8. Record product-specific listing URLs in a release ledger while retaining `https://ramsandesh.gumroad.com` as the durable store-home destination.
 
 ## Account and legal eligibility
 
@@ -51,3 +60,7 @@ Never falsify age, identity, tax, bank, or publisher information. Store eligibil
 ## Licensing
 
 The repository's MIT License is for companion software code. The book and publication assets remain separately copyrighted; see `BOOK_LICENSE.md`.
+
+---
+
+**Official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
