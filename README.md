@@ -17,7 +17,7 @@ The repository is being built as a practical learning system: runnable code, tes
 
 ## Current implementation status
 
-Parts **001–010** now have runnable companion implementations and tests:
+Parts **001–015** now have runnable companion implementations and automated tests:
 
 | Part | Topic | Companion focus |
 |---:|---|---|
@@ -30,7 +30,12 @@ Parts **001–010** now have runnable companion implementations and tests:
 | 007 | Data Preparation | Disjoint/stratified splits and training-only standardization |
 | 008 | Visualization & EDA | Quantiles, summaries, outliers, histograms, self-contained SVG scatter plots |
 | 009 | Artificial Neuron | Weighted contribution traces, activations, and activation derivatives |
-| 010 | Perceptron & Logistic Regression | From-scratch binary models, convergence histories, and comparison demo |
+| 010 | Perceptron & Logistic Regression | From-scratch binary models, convergence histories, comparison demo |
+| 011 | Computational Graphs & Autodiff | Scalar reverse-mode autodiff, graph traversal, chain-rule gradient tests |
+| 012 | Multilayer Backpropagation | `Neuron`/`Layer`/`MLP`, differentiable losses, end-to-end training |
+| 013 | Optimization | SGD, Momentum, RMSProp, Adam, weight decay, global gradient clipping |
+| 014 | Regularization | L1/L2, inverted dropout, early stopping, generalization monitoring |
+| 015 | Normalization & Stability | Batch/layer normalization, running moments, trainable affine terms, stable softmax |
 
 See [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) for the 120-part implementation tracker.
 
@@ -47,21 +52,21 @@ python -m unittest discover -s tests -p "test_*.py" -v
 For imports when running examples directly from the repository:
 
 ```bash
-PYTHONPATH=src python parts/001-foundations/train_or_gate.py
+PYTHONPATH=src python parts/011-autograd/autograd_demo.py
 ```
 
 PowerShell:
 
 ```powershell
 $env:PYTHONPATH = "src"
-python parts/001-foundations/train_or_gate.py
+python parts/011-autograd/autograd_demo.py
 ```
 
 The core companion package supports Python **3.10+**. Part 003 intentionally isolates its current NumPy dependency and uses Python **3.12+**.
 
 ## Quality and automation
 
-The `Repository Quality` workflow currently checks:
+The `Repository Quality` workflow checks:
 
 - repository invariants and durable-link policy;
 - whitespace and Python compilation;
