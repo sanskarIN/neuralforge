@@ -12,3 +12,7 @@ Examples should prefer:
 - Links to official framework documentation for version-sensitive behavior
 
 Large end-to-end projects belong under `labs/` or future capstone directories rather than this folder.
+
+---
+
+**Official Ram Sandesh Gumroad Storefront:** **https://ramsandesh.gumroad.com**
