@@ -2,6 +2,8 @@
 
 All notable changes to the NeuralForge companion repository will be documented here.
 
+The companion repository uses its own semantic-style versioning. Book/publication Version 1.0 is separate from the Python companion package version.
+
 ## [Unreleased]
 
 ### Added
@@ -18,19 +20,27 @@ All notable changes to the NeuralForge companion repository will be documented h
 - Part 003 companion: NumPy vectorization, feature standardization, dense layer, stable softmax, demo, tests, and isolated dependency file.
 - Part 004 companion: dependency-free vector/matrix operations, demo, and tests.
 - Part 005 companion: numerical derivatives, gradients, gradient checking, demo, and tests.
+- Part 006 companion: descriptive statistics, covariance/correlation, normal density, Bernoulli log-likelihood, reproducible bootstrap intervals, demo, and tests.
+- Part 007 companion: disjoint and stratified splits, row selection, training-only standardization, leakage demonstration, and tests.
+- Part 008 companion: quantiles, descriptive summaries, IQR outlier detection, histograms, self-contained SVG scatter plots, demo, and tests.
+- Part 009 companion: inspectable artificial-neuron traces, multiple activations, activation derivatives, demo, and tests.
+- Part 010 companion: from-scratch perceptron and logistic-regression modules, convergence/loss histories, comparison demo, and separate tests.
 - Part-by-part implementation status tracker for the 120-part curriculum.
 
 ### Changed
 - Modernized GitHub workflows to `actions/checkout@v7`, `actions/setup-python@v7`, and `actions/upload-artifact@v7`.
 - Expanded the README from repository planning notes into a runnable quick-start, implementation-status, automation, documentation, and licensing guide.
-- Updated the roadmap to mark Phase 1 complete, Phase 2/4 active, and release-readiness foundations established.
+- Advanced the README, roadmap, and implementation tracker from Parts 001–005 to Parts 001–010.
+- Queued Parts 011–015 as the next framework-light neural-network mechanics milestone.
+- Clarified that the companion package/repository version is independent of the book publication version.
 
 ### Verified
 - Pull request #5 exercised the complete Repository Quality workflow successfully before merge.
 - Dependency-free tests passed across Python 3.10, 3.11, and 3.12.
 - Part 003 NumPy tests passed in their isolated Python 3.12 CI environment.
 - Repository invariant validation passed.
+- Parts 006–010 are being delivered through a dedicated feature branch and will be merged only after the upgraded v7 workflow passes on the pull-request path.
 
-## [1.0.0] - 2026-08-18
+## [0.1.0] - 2026-08-18
 
-Initial repository/documentation foundation for the NeuralForge Complete 120-Part Master Edition companion project.
+Initial repository/documentation and Python package foundation for the NeuralForge Complete 120-Part Master Edition companion project.

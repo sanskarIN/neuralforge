@@ -17,12 +17,17 @@ This file tracks the open-source companion implementation for the 120-part Neura
 | 003 | NumPy Mastery for Vectorized Computation | Implemented | isolated NumPy 2.5.1 lab, tests, dedicated CI job |
 | 004 | Linear Algebra for Neural Networks | Implemented | `src/neuralforge/linear_algebra.py`, demo, unit tests |
 | 005 | Calculus for Neural Networks | Implemented | `src/neuralforge/calculus.py`, gradient-check demo, unit tests |
-| 006 | Probability and Statistics for Learning Systems | Queued | Next implementation batch |
-| 007 | Data Preparation and Leakage-Resistant Evaluation | Queued | Next implementation batch |
-| 008 | Visualization and Exploratory Data Analysis | Queued | Next implementation batch |
-| 009 | From a Biological Metaphor to an Artificial Neuron | Queued | Next implementation batch |
-| 010 | Build a Perceptron and Logistic Classifier from Scratch | Queued | Next implementation batch |
-| 011–120 | Remaining NeuralForge curriculum | Planned | Add part-specific code, tests, labs, and READMEs incrementally |
+| 006 | Probability and Statistics for Learning Systems | Implemented | descriptive statistics, covariance/correlation, likelihood, bootstrap intervals, demo, tests |
+| 007 | Data Preparation and Leakage-Resistant Evaluation | Implemented | disjoint/stratified splits, train-only standardization, leakage demo, tests |
+| 008 | Visualization and Exploratory Data Analysis | Implemented | quantiles, summaries, outliers, histograms, SVG scatter plots, demo, tests |
+| 009 | From a Biological Metaphor to an Artificial Neuron | Implemented | inspectable artificial neuron, activations/derivatives, trace demo, tests |
+| 010 | Build a Perceptron and Logistic Classifier from Scratch | Implemented | perceptron, logistic regression, comparison demo, separate unit tests |
+| 011 | Computational Graphs and Automatic Differentiation | Queued | Next implementation batch |
+| 012 | Backpropagation Through Multilayer Perceptrons | Queued | Next implementation batch |
+| 013 | Optimization Algorithms for Deep Neural Networks | Queued | Next implementation batch |
+| 014 | Regularization and Generalization in Deep Neural Networks | Queued | Next implementation batch |
+| 015 | Normalization and Training Stabilization in Deep Neural Networks | Queued | Next implementation batch |
+| 016–120 | Remaining NeuralForge curriculum | Planned | Add part-specific code, tests, labs, and READMEs incrementally |
 
 ## Repository-wide implementation requirements
 
@@ -38,4 +43,6 @@ A part should not be marked **Implemented** until it has, where applicable:
 
 ## Next batch
 
-Parts 006–010 should extend the dependency-light foundations before the repository begins framework-specific neural-network stacks. After that, Parts 011–020 can build computational graphs, backpropagation, optimization, regularization, normalization, loss functions, learning-rate control, initialization, gradient-flow analysis, and training-loop engineering.
+Parts **011–015** will move the repository from single-neuron/classifier foundations into computational graphs, automatic differentiation, multilayer backpropagation, optimization algorithms, regularization, and normalization/training stabilization.
+
+That batch should remain framework-light where possible so learners can inspect the underlying mechanics before later framework-specific implementations.
