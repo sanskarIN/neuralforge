@@ -1,5 +1,7 @@
 # Contributing to NeuralForge
 
+[![Official Gumroad Store](https://img.shields.io/badge/Gumroad-Ram%20Sandesh-FF90E8?style=flat-square&logo=gumroad&logoColor=000000)](https://ramsandesh.gumroad.com)
+
 Thank you for helping improve the NeuralForge companion repository.
 
 ## Commit identity
@@ -34,3 +36,11 @@ Prefer small, focused commits. Suggested prefixes:
 4. Do not commit secrets, credentials, private identity documents, or paid manuscript source files.
 5. Respect third-party licenses and attribution requirements.
 6. Keep durable project links in documentation; avoid embedding changeable social-media handles in permanent publication artifacts.
+7. When editing reader-facing documentation, preserve the canonical Gumroad store destination: `https://ramsandesh.gumroad.com`.
+
+## Reader-facing links
+
+- Canonical project: `https://github.com/sanskarIN/neuralforge`
+- **Official Gumroad store: `https://ramsandesh.gumroad.com`**
+
+See `docs/GUMROAD.md` for the store-link convention.
