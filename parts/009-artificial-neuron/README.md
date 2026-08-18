@@ -37,3 +37,7 @@ PYTHONPATH=src python -m unittest tests.test_neuron -v
 ## Conceptual boundary
 
 The biological-neuron analogy can help introduce weighted inputs and activation, but artificial neurons are mathematical components optimized with numerical algorithms. Their behavior should be understood from the equations and code rather than from the metaphor alone.
+
+---
+
+**NeuralForge / Ram Sandesh official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
