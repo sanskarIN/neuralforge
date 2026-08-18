@@ -16,9 +16,9 @@ Goal: create organized companion material for Parts 001–120 with runnable exam
 
 Current progress:
 
-- **Parts 001–005 implemented** with runnable code and automated tests.
-- **Parts 006–010 queued** as the next dependency-light foundations batch.
-- **Parts 011–120 planned** for incremental implementation.
+- **Parts 001–010 implemented** with runnable code, demos, and automated tests.
+- **Parts 011–015 queued** as the next framework-light neural-network mechanics batch.
+- **Parts 016–120 planned** for incremental implementation.
 
 See `docs/PART_IMPLEMENTATION_STATUS.md` for the detailed tracker.
 
@@ -35,7 +35,8 @@ Completed/in-progress work includes:
 - dependency-free unit-test matrix on Python 3.10, 3.11, and 3.12;
 - isolated NumPy Part 003 tests on Python 3.12;
 - reproducibility policy and shared seeding utility;
-- Dependabot monitoring for GitHub Actions and active Python dependencies.
+- Dependabot monitoring for GitHub Actions and active Python dependencies;
+- pull-request validation before milestone merges.
 
 Future additions should include framework-specific smoke tests, static analysis, formatting/linting where useful, compatibility matrices, and heavier integration tests only when their maintenance cost is justified.
 
@@ -59,12 +60,12 @@ Maintain `CHANGELOG.md`, errata, dependency updates, security fixes, tests, comp
 
 ## Next implementation milestone
 
-Implement Parts **006–010**:
+Implement Parts **011–015**:
 
-1. Probability and Statistics for Learning Systems
-2. Data Preparation and Leakage-Resistant Evaluation
-3. Visualization and Exploratory Data Analysis
-4. From a Biological Metaphor to an Artificial Neuron
-5. Build a Perceptron and Logistic Classifier from Scratch
+1. Computational Graphs and Automatic Differentiation
+2. Backpropagation Through Multilayer Perceptrons
+3. Optimization Algorithms for Deep Neural Networks
+4. Regularization and Generalization in Deep Neural Networks
+5. Normalization and Training Stabilization in Deep Neural Networks
 
-The milestone should preserve the current rule: every implemented part should have meaningful runnable material, validation/tests where applicable, and clear dependency/provenance documentation.
+This milestone should keep the core mathematical mechanisms inspectable before introducing larger framework-specific training stacks. Each implemented part should continue to include meaningful runnable material, automated correctness checks where applicable, and clear dependency/provenance documentation.
