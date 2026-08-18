@@ -21,7 +21,7 @@ The repository is being built as a practical learning system: runnable code, tes
 
 ## Current implementation status
 
-Parts **001–020** now have runnable companion implementations and automated tests:
+Parts **001–025** now have runnable companion implementations and automated tests:
 
 | Part | Topic | Companion focus |
 |---:|---|---|
@@ -45,8 +45,15 @@ Parts **001–020** now have runnable companion implementations and automated te
 | 018 | Initialization & Signal Propagation | Xavier/He/LeCun schemes and seeded layerwise activation statistics |
 | 019 | Gradient Flow | finite checks, global/per-layer statistics, gradient/parameter ratio, health diagnostics |
 | 020 | Training-Loop Engineering | deterministic experiment configs, optimizer/schedule integration, gradient telemetry, JSON run records |
+| 021 | CNNs from First Principles | cross-correlation/convolution, padding, stride, dilation, max/average pooling |
+| 022 | CNN Architecture Design | shapes, parameter/MAC estimates, receptive fields, grouped convolution, residual compatibility |
+| 023 | Efficient & Mobile Vision | depthwise-separable/inverted-residual cost models, precision/model-size estimates, width scaling |
+| 024 | Object Detection | box geometry, IoU, class-aware NMS, matching, precision/recall |
+| 025 | Image Segmentation | confusion matrices, pixel accuracy, IoU/Dice, ignore labels, panoptic quality |
 
-See [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) for the 120-part implementation tracker. Parts **021–025** are the next queued visual-deep-learning milestone.
+See [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) for the 120-part implementation tracker.
+
+The reusable vision APIs for Parts 021–025 are grouped under **`neuralforge.vision`** while the lower-level modules remain importable individually.
 
 ## Quick start
 
@@ -58,17 +65,17 @@ cd neuralforge
 python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-For imports when running examples directly from the repository:
+Run the first-principles CNN demo:
 
 ```bash
-PYTHONPATH=src python parts/020-training-loop-engineering/experiment_demo.py
+PYTHONPATH=src python parts/021-convolutional-neural-networks/cnn_primitives_demo.py
 ```
 
 PowerShell:
 
 ```powershell
 $env:PYTHONPATH = "src"
-python parts/020-training-loop-engineering/experiment_demo.py
+python parts/021-convolutional-neural-networks/cnn_primitives_demo.py
 ```
 
 The core companion package supports Python **3.10+**. Part 003 intentionally isolates its current NumPy dependency and uses Python **3.12+**.
