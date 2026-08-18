@@ -17,7 +17,7 @@ The repository is being built as a practical learning system: runnable code, tes
 
 ## Current implementation status
 
-Parts **001–005** now have runnable companion implementations and tests:
+Parts **001–010** now have runnable companion implementations and tests:
 
 | Part | Topic | Companion focus |
 |---:|---|---|
@@ -26,6 +26,11 @@ Parts **001–005** now have runnable companion implementations and tests:
 | 003 | NumPy Mastery | Vectorization, standardization, dense layers, stable softmax |
 | 004 | Linear Algebra | Dot products, norms, cosine similarity, transpose, matmul, outer products |
 | 005 | Calculus | Numerical derivatives, gradients, and analytical gradient checking |
+| 006 | Probability & Statistics | Descriptive statistics, covariance/correlation, likelihood, bootstrap intervals |
+| 007 | Data Preparation | Disjoint/stratified splits and training-only standardization |
+| 008 | Visualization & EDA | Quantiles, summaries, outliers, histograms, self-contained SVG scatter plots |
+| 009 | Artificial Neuron | Weighted contribution traces, activations, and activation derivatives |
+| 010 | Perceptron & Logistic Regression | From-scratch binary models, convergence histories, and comparison demo |
 
 See [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) for the 120-part implementation tracker.
 
@@ -73,9 +78,9 @@ src/           Shared neuralforge Python package
 parts/         Part-by-part companion implementations
 labs/          Cross-part practical labs and future capstones
 examples/      Reusable focused examples
- tests/         Dependency-free package tests
- tools/         Repository validation utilities
- docs/          Roadmap, policies, metadata, publishing and QA docs
+tests/         Dependency-free package tests
+tools/         Repository validation utilities
+docs/          Roadmap, policies, metadata, publishing and QA docs
 ```
 
 ## Documentation
