@@ -16,20 +16,25 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       - name: Validate repository
         run: python tools/validate_repository.py
 
-      - name: Compile repository tools
-        run: python -m compileall -q tools
+      - name: Compile repository Python
+        run: python -m compileall -q tools src tests parts
+
+      - name: Run dependency-free tests
+        env:
+          PYTHONPATH: src
+        run: python -m unittest discover -s tests -p "test_*.py" -v
 
       - name: Create tracked-file SHA-256 manifest
         shell: bash
@@ -48,7 +53,7 @@ jobs:
             HEAD
 
       - name: Upload release-readiness artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: neuralforge-release-readiness-${{ github.ref_name }}
           path: |
