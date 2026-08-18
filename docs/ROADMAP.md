@@ -16,9 +16,9 @@ Goal: create organized companion material for Parts 001–120 with runnable exam
 
 Current progress:
 
-- **Parts 001–010 implemented** with runnable code, demos, and automated tests.
-- **Parts 011–015 queued** as the next framework-light neural-network mechanics batch.
-- **Parts 016–120 planned** for incremental implementation.
+- **Parts 001–015 implemented** with runnable code, demos, and automated tests.
+- **Parts 016–020 queued** as the next training-system engineering batch.
+- **Parts 021–120 planned** for incremental implementation.
 
 See `docs/PART_IMPLEMENTATION_STATUS.md` for the detailed tracker.
 
@@ -30,11 +30,12 @@ Add practical cross-part labs, reference implementations, legally redistributabl
 
 Completed/in-progress work includes:
 
-- repository invariant validator;
+- repository invariant validator that now enforces Parts 001–015 implementation structure;
 - Python compilation checks;
 - dependency-free unit-test matrix on Python 3.10, 3.11, and 3.12;
 - isolated NumPy Part 003 tests on Python 3.12;
 - reproducibility policy and shared seeding utility;
+- scalar autodiff, multilayer backpropagation, optimizer-state, regularization, and normalization tests;
 - Dependabot monitoring for GitHub Actions and active Python dependencies;
 - pull-request validation before milestone merges.
 
@@ -60,12 +61,12 @@ Maintain `CHANGELOG.md`, errata, dependency updates, security fixes, tests, comp
 
 ## Next implementation milestone
 
-Implement Parts **011–015**:
+Implement Parts **016–020**:
 
-1. Computational Graphs and Automatic Differentiation
-2. Backpropagation Through Multilayer Perceptrons
-3. Optimization Algorithms for Deep Neural Networks
-4. Regularization and Generalization in Deep Neural Networks
-5. Normalization and Training Stabilization in Deep Neural Networks
+1. Loss Functions and Output-Layer Design
+2. Learning-Rate Schedules and Optimization Control
+3. Initialization and Deep Signal Propagation
+4. Gradient Flow and Deep-Network Stability
+5. Training-Loop Engineering & Reproducible Experiment Runners
 
-This milestone should keep the core mathematical mechanisms inspectable before introducing larger framework-specific training stacks. Each implemented part should continue to include meaningful runnable material, automated correctness checks where applicable, and clear dependency/provenance documentation.
+This milestone should convert the current framework-light neural-network mechanics into a more systematic training stack with objective/output pairing, schedule control, signal propagation diagnostics, and reproducible experiment orchestration.
