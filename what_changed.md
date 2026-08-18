@@ -4,6 +4,7 @@
 
 - Initialized the NeuralForge companion repository.
 - Confirmed canonical repository: `https://github.com/sanskarIN/neuralforge`.
+- Confirmed official Ram Sandesh Gumroad storefront: `https://ramsandesh.gumroad.com`.
 - Added separate licensing boundaries for MIT-licensed companion code and copyrighted book/publication assets.
 - Added contribution, security, conduct, release, metadata, publishing, repository-structure, roadmap, errata, testing, issue-template, support, dependency, versioning, reproducibility, and citation documentation.
 - Added workspace guides for Parts 1-120, labs, examples, and tests.
@@ -11,7 +12,7 @@
 - Prepared Version 1.0 publication assets: master PDF, editable DOCX, reflowable EPUB, storefront cover, free preview, detailed TOC, store metadata, product descriptions, publishing guide, source archive, QA reports, and checksums.
 - Created purpose-specific release packages: `NeuralForge_Storefront_Package_v1.0.zip`, `NeuralForge_Publication_Package_v1.0.zip`, `NeuralForge_Author_Source_Package_v1.0.zip`, and a complete bundle containing all three.
 - Publication source audit confirms Parts 1-120 are represented; the recovered source set required reconstruction of Part 59, documented separately in the publication change log.
-- The final fixed-layout PDF, EPUB, reconstructed Part 59, preview, and 120-part source archive contain no X/Twitter URL. The canonical NeuralForge repository is used for durable project linking.
+- The canonical NeuralForge repository and official Gumroad storefront are used as durable project/store destinations.
 
 ## 2026-08-18 companion-code implementation continuation
 
@@ -35,10 +36,22 @@
 - Added a non-destructive Release Readiness workflow that validates, tests, generates SHA-256 manifests, and creates source archives without automatically publishing a GitHub Release.
 - PR #5 exercised the original pull-request CI path successfully on Python 3.10/3.11/3.12 plus the NumPy Part 003 job before merge.
 - PR #7 merged the completed Parts 006-010 milestone after 65 dependency-free tests passed on Python 3.10/3.11/3.12, the isolated NumPy Part 003 job passed, and the strengthened repository validator passed.
+- PR #8 merged the completed Parts 011-015 milestone after all five Repository Quality jobs passed on the exact PR head.
 - Modernized workflow dependencies to `actions/checkout@v7`, `actions/setup-python@v7`, and `actions/upload-artifact@v7` after CI exposed old Node-runtime deprecation warnings.
 - Refreshed README, roadmap, changelog, implementation tracker, validator, and package API through Part 015.
 - The companion Python/repository baseline remains version `0.1.0`; the book's Publication Version 1.0 remains a separate lifecycle.
-- The Parts 011-015 feature branch will be merged only after its exact PR head passes the full Repository Quality matrix.
+
+## 2026-08-18 Gumroad storefront integration
+
+- Added the canonical storefront URL everywhere it is appropriate on GitHub-facing project surfaces: `https://ramsandesh.gumroad.com`.
+- Added `assets/gumroad-storefront.svg`, a custom NeuralForge storefront badge with a direct Gumroad link when embedded in Markdown.
+- Added `STORE.md` as the central repository/storefront boundary document.
+- Added `.github/FUNDING.yml` with the Gumroad storefront as a custom GitHub funding/store link.
+- Highlighted the Gumroad storefront near the top of `README.md`, in publication metadata, durable-link documentation, support/contribution docs, publishing guidance, release QA, repository structure, and roadmap.
+- Added the Gumroad destination to the GitHub issue chooser, bug-report template, documentation template, feature-request template, and pull-request template.
+- Added a release-check requirement that the storefront URL remain exactly `https://ramsandesh.gumroad.com` on canonical GitHub-facing surfaces.
+- The repository validator is being extended so CI requires the storefront badge, `STORE.md`, `.github/FUNDING.yml`, and canonical Gumroad URL on key public files.
+- The storefront badge is explicitly documented as a custom NeuralForge repository graphic rather than an official Gumroad corporate logo.
 
 ## Commit identity
 
@@ -54,3 +67,7 @@ For local clones, keep the same email with:
 ```bash
 git config user.email "sanskarin@outlook.in"
 ```
+
+---
+
+**Official Gumroad Storefront:** **https://ramsandesh.gumroad.com**
