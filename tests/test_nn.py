@@ -22,8 +22,7 @@ from neuralforge.nn import (  # noqa: E402
 
 class NeuralNetworkTests(unittest.TestCase):
     def test_neuron_forward_and_parameter_count(self) -> None:
-        neuron = Neuron.random(3, activation="tanh", seed_generator := None) if False else None
-        # Use explicit parameters here so the expected value is deterministic.
+        # Use explicit parameters so the expected value is deterministic.
         neuron = Neuron(
             weights=(Value(0.5), Value(-1.0), Value(2.0)),
             bias=Value(0.25),
@@ -77,7 +76,13 @@ class NeuralNetworkTests(unittest.TestCase):
     def test_training_reduces_tiny_regression_loss(self) -> None:
         features = [[-1.0], [0.0], [1.0]]
         targets = [-1.5, 0.5, 2.5]
-        model = MLP(1, [3, 1], hidden_activation="tanh", output_activation="linear", seed=11)
+        model = MLP(
+            1,
+            [3, 1],
+            hidden_activation="tanh",
+            output_activation="linear",
+            seed=11,
+        )
 
         def batch_loss() -> Value:
             predictions = []
