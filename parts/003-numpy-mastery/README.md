@@ -36,3 +36,7 @@ python parts/003-numpy-mastery/vectorization_demo.py
 ```bash
 python -m unittest discover -s parts/003-numpy-mastery -p "test_*.py" -v
 ```
+
+---
+
+**NeuralForge / Ram Sandesh official store:** **[https://ramsandesh.gumroad.com](https://ramsandesh.gumroad.com)**
