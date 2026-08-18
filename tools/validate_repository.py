@@ -13,6 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CANONICAL_REPO = "https://github.com/sanskarIN/neuralforge"
+CANONICAL_GUMROAD = "https://ramsandesh.gumroad.com"
 
 REQUIRED_FILES = (
     "README.md",
@@ -25,12 +26,14 @@ REQUIRED_FILES = (
     "what_changed.md",
     "CITATION.cff",
     "pyproject.toml",
+    "docs/GUMROAD.md",
     "docs/METADATA.md",
     "docs/PART_IMPLEMENTATION_STATUS.md",
     "docs/RELEASE_CHECKLIST.md",
     "docs/SOCIAL_LINK_POLICY.md",
     ".github/CODEOWNERS",
     ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
     ".github/workflows/repository-quality.yml",
     ".github/workflows/release-readiness.yml",
 )
@@ -92,6 +95,19 @@ REQUIRED_MILESTONE_TESTS = (
     "tests/test_normalization.py",
 )
 
+GUMROAD_REQUIRED_FILES = (
+    "README.md",
+    "SUPPORT.md",
+    "CONTRIBUTING.md",
+    "docs/GUMROAD.md",
+    "docs/METADATA.md",
+    "docs/PUBLISHING_GUIDE.md",
+    "docs/RELEASE_CHECKLIST.md",
+    "docs/SOCIAL_LINK_POLICY.md",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
+)
+
 TEXT_SUFFIXES = {
     ".md",
     ".txt",
@@ -122,16 +138,36 @@ def iter_text_files() -> list[Path]:
     return files
 
 
+def contains(path: Path, value: str) -> bool:
+    try:
+        return value in path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError):
+        return False
+
+
 def validate_implemented_parts(errors: list[str]) -> None:
     for relative in IMPLEMENTED_PART_DIRS:
         directory = ROOT / relative
         if not directory.is_dir():
             errors.append(f"missing implemented part directory: {relative}")
             continue
-        if not (directory / "README.md").is_file():
+        readme = directory / "README.md"
+        if not readme.is_file():
             errors.append(f"implemented part is missing README.md: {relative}")
+        elif not contains(readme, CANONICAL_GUMROAD):
+            errors.append(f"implemented part README is missing Gumroad URL: {relative}")
         if not list(directory.glob("*.py")):
             errors.append(f"implemented part has no runnable Python material: {relative}")
+
+
+def validate_gumroad_links(errors: list[str]) -> None:
+    for relative in GUMROAD_REQUIRED_FILES:
+        path = ROOT / relative
+        if not path.is_file():
+            errors.append(f"missing Gumroad-required file: {relative}")
+            continue
+        if not contains(path, CANONICAL_GUMROAD):
+            errors.append(f"canonical Gumroad URL missing from {relative}")
 
 
 def main() -> int:
@@ -154,9 +190,10 @@ def main() -> int:
             errors.append(f"missing milestone test module: {relative}")
 
     validate_implemented_parts(errors)
+    validate_gumroad_links(errors)
 
     readme = ROOT / "README.md"
-    if readme.is_file() and CANONICAL_REPO not in readme.read_text(encoding="utf-8"):
+    if readme.is_file() and not contains(readme, CANONICAL_REPO):
         errors.append("README.md does not contain the canonical repository URL")
 
     for path in iter_text_files():
@@ -178,11 +215,13 @@ def main() -> int:
 
     print("NeuralForge repository validation passed.")
     print(f"Canonical repository: {CANONICAL_REPO}")
+    print(f"Canonical Gumroad store: {CANONICAL_GUMROAD}")
     print(f"Checked {len(REQUIRED_FILES)} required files.")
     print(f"Checked {len(REQUIRED_DIRS)} required directories.")
     print(f"Checked {len(REQUIRED_SOURCE_MODULES)} shared source modules.")
     print(f"Checked {len(REQUIRED_MILESTONE_TESTS)} milestone test modules.")
     print(f"Checked {len(IMPLEMENTED_PART_DIRS)} implemented part directories.")
+    print(f"Checked {len(GUMROAD_REQUIRED_FILES)} Gumroad-required documentation surfaces.")
     return 0
 
 
