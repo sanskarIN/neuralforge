@@ -66,6 +66,7 @@ GUMROAD_REQUIRED_SURFACES = (
     "CONTRIBUTING.md",
     "CHANGELOG.md",
     "what_changed.md",
+    "pyproject.toml",
     "docs/METADATA.md",
     "docs/PUBLISHING_GUIDE.md",
     "docs/RELEASE_CHECKLIST.md",
