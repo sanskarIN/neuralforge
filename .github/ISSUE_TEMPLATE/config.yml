@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Official Gumroad store
+    url: https://ramsandesh.gumroad.com
+    about: Visit the official Ram Sandesh storefront for NeuralForge publication releases and related digital products.
   - name: Security reports
     url: https://github.com/sanskarIN/neuralforge/security
     about: Please review SECURITY.md and use GitHub security features for sensitive reports.
