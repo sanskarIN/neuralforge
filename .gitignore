@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Notebooks
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build / test
+build/
+dist/
+coverage/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Models / datasets / large generated artifacts
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.safetensors
+data/
+datasets/
+artifacts/
+runs/
+
+# Publication source/build files should not be committed by default
+*.docx
+*.pdf
+*.epub
+*.zip
+
+# Secrets / credentials
+*.pem
+*.key
+credentials*.json
+service-account*.json
