@@ -97,6 +97,11 @@ IMPLEMENTED_PART_DIRS = (
     "parts/013-optimization",
     "parts/014-regularization",
     "parts/015-normalization-stability",
+    "parts/016-loss-functions-output-design",
+    "parts/017-learning-rate-schedules",
+    "parts/018-initialization-signal-propagation",
+    "parts/019-gradient-flow-stability",
+    "parts/020-training-loop-engineering",
 )
 
 REQUIRED_SOURCE_MODULES = (
@@ -117,6 +122,11 @@ REQUIRED_SOURCE_MODULES = (
     "src/neuralforge/optim.py",
     "src/neuralforge/regularization.py",
     "src/neuralforge/normalization.py",
+    "src/neuralforge/losses.py",
+    "src/neuralforge/schedules.py",
+    "src/neuralforge/initialization.py",
+    "src/neuralforge/gradient_flow.py",
+    "src/neuralforge/training.py",
 )
 
 REQUIRED_MILESTONE_TESTS = (
@@ -125,6 +135,11 @@ REQUIRED_MILESTONE_TESTS = (
     "tests/test_optim.py",
     "tests/test_regularization.py",
     "tests/test_normalization.py",
+    "tests/test_losses.py",
+    "tests/test_schedules.py",
+    "tests/test_initialization.py",
+    "tests/test_gradient_flow.py",
+    "tests/test_training.py",
 )
 
 TEXT_SUFFIXES = {
@@ -163,8 +178,19 @@ def validate_implemented_parts(errors: list[str]) -> None:
         if not directory.is_dir():
             errors.append(f"missing implemented part directory: {relative}")
             continue
-        if not (directory / "README.md").is_file():
+        readme = directory / "README.md"
+        if not readme.is_file():
             errors.append(f"implemented part is missing README.md: {relative}")
+        else:
+            try:
+                readme_text = readme.read_text(encoding="utf-8")
+            except UnicodeDecodeError:
+                errors.append(f"implemented part README is not UTF-8: {relative}")
+            else:
+                if CANONICAL_GUMROAD not in readme_text:
+                    errors.append(
+                        f"implemented part README is missing canonical Gumroad storefront: {relative}"
+                    )
         if not list(directory.glob("*.py")):
             errors.append(f"implemented part has no runnable Python material: {relative}")
 
