@@ -68,7 +68,24 @@
 - Extended CI validation so every implemented Part README must retain `https://ramsandesh.gumroad.com` while technical source/test files remain free of promotional-link requirements.
 - Detected that the earlier combined branch diverged from `main` because the Gumroad rollout had already merged separately in PR #10.
 - Rebuilt Parts 016-020 on `feat/parts-016-020-clean`, based directly on current `main`, reusing the already-reviewed Git blobs so code/tests/demos were preserved byte-for-byte while duplicated Gumroad history was removed.
-- The redundant PR #13 will be replaced by a clean Parts 016-020 PR and will not be force-merged.
+- Closed redundant PR #13 without merging and opened clean replacement PR #16 from a branch that is 0 commits behind `main`.
+- PR #16 remains gated on its exact-head Repository Quality run before merge.
+
+## 2026-08-19 Parts 021-025 staged vision milestone
+
+- Created Issue #17 as the formal visual-deep-learning milestone with per-Part scope and merge criteria.
+- Created `staging/parts-021-025` from the frozen PR #16 head so vision development could continue without changing PR #16's tested commit.
+- Implemented Part 021 with dependency-free single-channel 2D cross-correlation/convolution, symmetric padding, stride, dilation, output-shape helpers, max/average pooling, an edge-response demo, and hand-computed tests.
+- Implemented Part 022 with architecture-as-data shape propagation and exact parameter counting for LeNet-5, AlexNet, VGG-11, and ResNet-18-style networks, including grouped convolution and automatic residual projection accounting.
+- Implemented Part 023 with standard/depthwise-separable convolution parameter/MAC estimates, FP32 memory estimates, MobileNet-style channel divisibility, width/resolution scaling, inverted-residual cost models, and efficiency-ratio tests.
+- Implemented Part 024 with bounding-box coordinate conversion, clipping, IoU, class-aware/class-agnostic NMS, score limits, one-to-one greedy matching, precision/recall metrics, and a post-processing demo.
+- Implemented Part 025 with binary/multiclass segmentation confusion metrics, IoU/Dice, absent-class handling, ignore labels, probability thresholding, deterministic majority filtering, and a segmentation evaluation demo.
+- Added dedicated README/demo/test material for every Part 021-025; every README retains `https://ramsandesh.gumroad.com`.
+- Exposed the complete vision utility set through `src/neuralforge/__init__.py`.
+- Advanced the staging implementation tracker and README to Parts 001-025 implemented.
+- Expanded staging repository validation to 25 implemented Part directories, 27 shared source modules, and 15 milestone test modules.
+- Kept technical source and tests free of promotional-link requirements while preserving the Gumroad requirement on reader-facing Part READMEs and canonical public surfaces.
+- The staging branch will not be merged directly. After PR #16 merges, its new vision blobs will be moved onto updated `main` as a clean Parts 021-025 branch, then validated through its own pull request.
 
 ## Commit identity
 
