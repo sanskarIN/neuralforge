@@ -50,8 +50,25 @@
 - Highlighted the Gumroad storefront near the top of `README.md`, in publication metadata, durable-link documentation, support/contribution docs, publishing guidance, release QA, repository structure, and roadmap.
 - Added the Gumroad destination to the GitHub issue chooser, bug-report template, documentation template, feature-request template, and pull-request template.
 - Added a release-check requirement that the storefront URL remain exactly `https://ramsandesh.gumroad.com` on canonical GitHub-facing surfaces.
-- The repository validator is being extended so CI requires the storefront badge, `STORE.md`, `.github/FUNDING.yml`, and canonical Gumroad URL on key public files.
+- Repository validation requires the storefront badge, `STORE.md`, `.github/FUNDING.yml`, and canonical Gumroad URL on key public files.
 - The storefront badge is explicitly documented as a custom NeuralForge repository graphic rather than an official Gumroad corporate logo.
+- PR #10 merged the Gumroad rollout after the complete Repository Quality matrix passed on its exact head.
+
+## 2026-08-19 Parts 016-020 clean milestone
+
+- Implemented Part 016 with logits-first binary/categorical cross-entropy, regression losses, Huber loss, stable log-sum-exp, output-layer design recommendations, demo, and tests.
+- Implemented Part 017 with constant, step, exponential, cosine, warmup-cosine learning-rate schedules and stateful plateau reduction, with demo and tests.
+- Implemented Part 018 with Xavier/Glorot, He/Kaiming, LeCun, uniform/zero initialization helpers plus deterministic forward-signal propagation summaries, demo, and tests.
+- Implemented Part 019 with global/per-layer gradient statistics, finite-gradient checks, gradient/parameter ratios, configurable health classification, demo, and tests.
+- Implemented Part 020 with reproducible experiment configuration, deterministic fingerprints, optimizer/schedule integration, gradient diagnostics, optional clipping, epoch metrics, JSON run records, demo, and tests.
+- Exposed Parts 016-020 through the shared `neuralforge` package API.
+- Advanced the 120-part implementation tracker to Parts 001-020 implemented and Parts 021-025 queued.
+- Updated README and roadmap to the visual-deep-learning milestone: convolution mechanics, CNN architectures, mobile/efficient vision, object detection, and segmentation.
+- Expanded repository invariants from 15 to 20 implemented Part directories, from 17 to 22 required shared source modules, and from 5 to 10 milestone test modules.
+- Extended CI validation so every implemented Part README must retain `https://ramsandesh.gumroad.com` while technical source/test files remain free of promotional-link requirements.
+- Detected that the earlier combined branch diverged from `main` because the Gumroad rollout had already merged separately in PR #10.
+- Rebuilt Parts 016-020 on `feat/parts-016-020-clean`, based directly on current `main`, reusing the already-reviewed Git blobs so code/tests/demos were preserved byte-for-byte while duplicated Gumroad history was removed.
+- The redundant PR #13 will be replaced by a clean Parts 016-020 PR and will not be force-merged.
 
 ## Commit identity
 
