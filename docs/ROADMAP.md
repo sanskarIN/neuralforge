@@ -20,9 +20,8 @@ Goal: create organized companion material for Parts 001–120 with runnable exam
 
 Current progress:
 
-- **Parts 001–020 implemented** with runnable code, demos, and automated tests.
-- **Parts 021–025 queued** as the next visual-deep-learning batch.
-- **Parts 026–120 planned** for incremental implementation.
+- **Parts 001–025 implemented** with runnable code, demos, and automated tests.
+- **Parts 026–120 planned** for incremental implementation after the next canonical title batch is selected.
 
 See `docs/PART_IMPLEMENTATION_STATUS.md` for the detailed tracker.
 
@@ -34,13 +33,17 @@ Add practical cross-part labs, reference implementations, legally redistributabl
 
 Completed/in-progress work includes:
 
-- repository invariant validator that enforces Parts 001–020 implementation structure;
+- repository invariant validator that enforces Parts 001–025 implementation structure;
 - canonical GitHub repository and Gumroad storefront checks on key public surfaces;
 - Python compilation checks;
 - dependency-free unit-test matrix on Python 3.10, 3.11, and 3.12;
 - isolated NumPy Part 003 tests on Python 3.12;
 - reproducibility policy and shared seeding utility;
 - scalar autodiff, multilayer backpropagation, optimizer-state, regularization, normalization, loss, schedule, initialization, gradient-flow, and training-runner tests;
+- first-principles convolution/pooling and CNN architecture tests;
+- mobile-vision parameter/MAC cost tests;
+- object-detection geometry/NMS/matching tests;
+- segmentation confusion/IoU/Dice/mask-processing tests;
 - deterministic experiment configuration fingerprints and JSON experiment records;
 - Dependabot monitoring for GitHub Actions and active Python dependencies;
 - pull-request validation before milestone merges.
@@ -66,9 +69,9 @@ Tagged public releases should begin only after a deliberate version decision and
 
 Maintain `CHANGELOG.md`, errata, dependency updates, security fixes, tests, compatibility notes, durable project metadata, and the canonical Gumroad storefront destination. Permanent ebook copies should continue to avoid changeable social-media profile links.
 
-## Next implementation milestone
+## Completed visual-deep-learning milestone — Parts 021–025
 
-Implement Parts **021–025**:
+The repository now includes framework-light foundations for:
 
 1. Convolutional Neural Networks from First Principles
 2. CNN Architecture Design: From LeNet to ResNet
@@ -76,7 +79,11 @@ Implement Parts **021–025**:
 4. Object Detection from First Principles to Real-Time Systems
 5. Image Segmentation: From Pixels to Panoptic Understanding
 
-This milestone should introduce visual deep learning progressively: first make convolution/pooling mechanics inspectable, then build architecture patterns and only afterward expand into efficiency, detection, and segmentation.
+The milestone progresses from explicit convolution/pooling mechanics into architecture-level shape reasoning, mobile efficiency, box-based detection, and per-pixel segmentation while keeping core logic dependency-free and testable.
+
+## Next implementation milestone
+
+Select the exact Part **026 onward** titles from the canonical 120-Part NeuralForge title inventory before opening the next code branch. This prevents topic-name drift or guessed chapter titles while preserving the established incremental implementation workflow.
 
 ---
 
