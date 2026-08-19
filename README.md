@@ -24,7 +24,7 @@ For available digital publications and storefront releases, visit the **Ram Sand
 
 ## Current implementation status
 
-Parts **001–020** now have runnable companion implementations and automated tests:
+Parts **001–025** now have runnable companion implementations and automated tests:
 
 | Part | Topic | Companion focus |
 |---:|---|---|
@@ -48,6 +48,11 @@ Parts **001–020** now have runnable companion implementations and automated te
 | 018 | Initialization & Signal Propagation | Xavier/He/LeCun initialization and seeded forward-signal diagnostics |
 | 019 | Gradient Flow | Global/per-layer gradient statistics, finite checks, health classification |
 | 020 | Training-Loop Engineering | Reproducible experiment config, fingerprints, schedules, diagnostics, JSON run records |
+| 021 | CNNs from First Principles | 2D convolution/correlation, stride/padding/dilation, max/average pooling |
+| 022 | CNN Architecture Design | LeNet/AlexNet/VGG/ResNet shape propagation, parameters, residual projections |
+| 023 | Efficient CNNs & Mobile Vision | Depthwise-separable costs, width/resolution scaling, inverted residuals |
+| 024 | Object Detection | Box conversion/clipping, IoU, class-aware NMS, matching, precision/recall |
+| 025 | Image Segmentation | Binary/multiclass IoU/Dice, confusion metrics, thresholding, mask filtering |
 
 See [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) for the 120-part implementation tracker.
 
@@ -64,14 +69,14 @@ python -m unittest discover -s tests -p "test_*.py" -v
 For imports when running examples directly from the repository:
 
 ```bash
-PYTHONPATH=src python parts/020-training-loop-engineering/experiment_demo.py
+PYTHONPATH=src python parts/025-image-segmentation/segmentation_demo.py
 ```
 
 PowerShell:
 
 ```powershell
 $env:PYTHONPATH = "src"
-python parts/020-training-loop-engineering/experiment_demo.py
+python parts/025-image-segmentation/segmentation_demo.py
 ```
 
 The core companion package supports Python **3.10+**. Part 003 intentionally isolates its current NumPy dependency and uses Python **3.12+**.

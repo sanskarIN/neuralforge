@@ -32,11 +32,11 @@ This file tracks the open-source companion implementation for the 120-part Neura
 | 018 | Initialization and Deep Signal Propagation | Implemented | Xavier/He/LeCun initialization, seeded matrices, forward-signal statistics, tests |
 | 019 | Gradient Flow and Deep-Network Stability | Implemented | global/per-layer gradient stats, finite checks, health classification, diagnostics demo, tests |
 | 020 | Training-Loop Engineering & Reproducible Experiment Runners | Implemented | experiment config/fingerprint, schedules, optimizer integration, diagnostics, JSON records, tests |
-| 021 | Convolutional Neural Networks from First Principles | Queued | Next implementation batch |
-| 022 | CNN Architecture Design: From LeNet to ResNet | Queued | Next implementation batch |
-| 023 | Efficient CNNs & Mobile Vision | Queued | Next implementation batch |
-| 024 | Object Detection from First Principles to Real-Time Systems | Queued | Next implementation batch |
-| 025 | Image Segmentation: From Pixels to Panoptic Understanding | Queued | Next implementation batch |
+| 021 | Convolutional Neural Networks from First Principles | Implemented | 2D correlation/convolution, padding/stride/dilation, pooling, shape helpers, demo, tests |
+| 022 | CNN Architecture Design: From LeNet to ResNet | Implemented | LeNet/AlexNet/VGG/ResNet shape models, parameter counts, residual projections, demo, tests |
+| 023 | Efficient CNNs & Mobile Vision | Implemented | standard/depthwise cost estimates, scaling, inverted residuals, MAC/parameter ratios, demo, tests |
+| 024 | Object Detection from First Principles to Real-Time Systems | Implemented | box conversion/clipping, IoU, NMS, greedy matching, precision/recall, demo, tests |
+| 025 | Image Segmentation: From Pixels to Panoptic Understanding | Implemented | binary/multiclass masks, IoU/Dice, confusion metrics, thresholding/filtering, demo, tests |
 | 026–120 | Remaining NeuralForge curriculum | Planned | Add part-specific code, tests, labs, and READMEs incrementally |
 
 ## Repository-wide implementation requirements
@@ -54,7 +54,7 @@ A part should not be marked **Implemented** until it has, where applicable:
 
 ## Next batch
 
-Parts **021–025** move the companion repository into visual deep learning: convolution mechanics, CNN architecture design, efficient/mobile vision, object detection, and image segmentation. The implementation should preserve the current pattern of inspectable foundations before larger framework-specific stacks are introduced.
+After the Parts **021–025** vision milestone passes its own clean pull-request CI gate, the next implementation batch should be selected from the canonical Part 026 onward title inventory before code is added. This avoids guessing or renaming curriculum topics while preserving the five-Part incremental workflow.
 
 ---
 

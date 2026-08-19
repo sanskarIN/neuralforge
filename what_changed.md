@@ -29,9 +29,7 @@
 - Part 014 adds differentiable L1/L2 penalties, deterministic inverted dropout, early stopping, generalization-gap monitoring, and parameter-norm monitoring.
 - Part 015 adds differentiable batch/layer normalization, trainable affine normalization parameters, running evaluation moments, and numerically stable scalar softmax.
 - Every Part 011-015 has a dedicated README, runnable demo, reusable source module, and automated tests.
-- Advanced the 120-part implementation tracker: Parts 001-015 are implemented and Parts 016-020 are queued next.
-- Parts 016-020 are queued for loss/output-layer design, learning-rate schedules, initialization/signal propagation, gradient-flow diagnostics, and reproducible training-loop engineering.
-- Strengthened repository validation so every implemented Part 001-015 must retain a README and runnable Python material; all shared source modules and Part 011-015 milestone tests are required as well.
+- Advanced the 120-part implementation tracker through Part 015.
 - Added Dependabot monitoring for GitHub Actions and the active Part 003 Python dependency.
 - Added a non-destructive Release Readiness workflow that validates, tests, generates SHA-256 manifests, and creates source archives without automatically publishing a GitHub Release.
 - PR #5 exercised the original pull-request CI path successfully on Python 3.10/3.11/3.12 plus the NumPy Part 003 job before merge.
@@ -63,12 +61,34 @@
 - Implemented Part 020 with reproducible experiment configuration, deterministic fingerprints, optimizer/schedule integration, gradient diagnostics, optional clipping, epoch metrics, JSON run records, demo, and tests.
 - Exposed Parts 016-020 through the shared `neuralforge` package API.
 - Advanced the 120-part implementation tracker to Parts 001-020 implemented and Parts 021-025 queued.
-- Updated README and roadmap to the visual-deep-learning milestone: convolution mechanics, CNN architectures, mobile/efficient vision, object detection, and segmentation.
 - Expanded repository invariants from 15 to 20 implemented Part directories, from 17 to 22 required shared source modules, and from 5 to 10 milestone test modules.
 - Extended CI validation so every implemented Part README must retain `https://ramsandesh.gumroad.com` while technical source/test files remain free of promotional-link requirements.
 - Detected that the earlier combined branch diverged from `main` because the Gumroad rollout had already merged separately in PR #10.
-- Rebuilt Parts 016-020 on `feat/parts-016-020-clean`, based directly on current `main`, reusing the already-reviewed Git blobs so code/tests/demos were preserved byte-for-byte while duplicated Gumroad history was removed.
-- The redundant PR #13 will be replaced by a clean Parts 016-020 PR and will not be force-merged.
+- Rebuilt Parts 016-020 on `feat/parts-016-020-clean`, based directly on current `main`, reusing already-reviewed Git blobs so code/tests/demos were preserved byte-for-byte while duplicated Gumroad history was removed.
+- Closed redundant PR #13 without merging and opened clean replacement PR #16 from a branch that was 0 commits behind `main`.
+- PR #16 passed the complete exact-head gate: 150 dependency-free tests on Python 3.10, 3.11, and 3.12, repository compilation/invariant validation, and the isolated NumPy Part 003 suite.
+- PR #16 merged as `5ca826a470a47a361338abb7b51ef6846180bd9a`.
+- Issue #9 was updated with the verified gate results and closed as completed.
+
+## 2026-08-19 Parts 021-025 vision milestone
+
+- Created Issue #17 as the formal visual-deep-learning milestone with per-Part scope and merge criteria.
+- Created `staging/parts-021-025` from the frozen PR #16 head so vision development could continue without changing PR #16's tested commit.
+- Implemented Part 021 with dependency-free single-channel 2D cross-correlation/convolution, symmetric padding, stride, dilation, output-shape helpers, max/average pooling, an edge-response demo, and hand-computed tests.
+- Implemented Part 022 with architecture-as-data shape propagation and exact parameter counting for LeNet-5, AlexNet, VGG-11, and ResNet-18-style networks, including grouped convolution and automatic residual projection accounting.
+- Implemented Part 023 with standard/depthwise-separable convolution parameter/MAC estimates, FP32 memory estimates, MobileNet-style channel divisibility, width/resolution scaling, inverted-residual cost models, and efficiency-ratio tests.
+- Implemented Part 024 with bounding-box coordinate conversion, clipping, IoU, class-aware/class-agnostic NMS, score limits, one-to-one greedy matching, precision/recall metrics, and a post-processing demo.
+- Implemented Part 025 with binary/multiclass segmentation confusion metrics, IoU/Dice, absent-class handling, ignore labels, probability thresholding, deterministic majority filtering, and a segmentation evaluation demo.
+- Added dedicated README/demo/test material for every Part 021-025; every README retains `https://ramsandesh.gumroad.com`.
+- Exposed the complete vision utility set through `src/neuralforge/__init__.py`.
+- Advanced the implementation tracker and README to Parts 001-025 implemented.
+- Expanded repository validation to 25 implemented Part directories, 27 shared source modules, and 15 milestone test modules.
+- Kept technical source and tests free of promotional-link requirements while preserving the Gumroad requirement on reader-facing Part READMEs and canonical public surfaces.
+- After PR #16 merged, synchronized the completed staging tree with `main` using a two-parent history sync commit without changing the vision tree.
+- Found an older divergent `feat/parts-021-025` branch and stacked PR #15; preserved that branch but closed PR #15 without merging rather than overwriting history.
+- Promoted the synchronized vision history to `feat/parts-021-025-clean`.
+- Verified `feat/parts-021-025-clean` is 0 commits behind `main`, with a clean merge base at `5ca826a470a47a361338abb7b51ef6846180bd9a` and only intended vision/API/docs/validator changes ahead.
+- The clean vision branch must pass its own exact-head Repository Quality gate before merge; Issue #17 remains open until that gate and merge complete.
 
 ## Commit identity
 
