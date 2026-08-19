@@ -27,12 +27,17 @@ This file tracks the open-source companion implementation for the 120-part Neura
 | 013 | Optimization Algorithms for Deep Neural Networks | Implemented | SGD, Momentum, RMSProp, Adam, weight decay, gradient clipping, tests |
 | 014 | Regularization and Generalization in Deep Neural Networks | Implemented | L1/L2 penalties, inverted dropout, early stopping, generalization helpers, tests |
 | 015 | Normalization and Training Stabilization in Deep Neural Networks | Implemented | batch/layer normalization, running moments, stable softmax, tests |
-| 016 | Loss Functions and Output-Layer Design | Queued | Next implementation batch |
-| 017 | Learning-Rate Schedules and Optimization Control | Queued | Next implementation batch |
-| 018 | Initialization and Deep Signal Propagation | Queued | Next implementation batch |
-| 019 | Gradient Flow and Deep-Network Stability | Queued | Next implementation batch |
-| 020 | Training-Loop Engineering & Reproducible Experiment Runners | Queued | Next implementation batch |
-| 021–120 | Remaining NeuralForge curriculum | Planned | Add part-specific code, tests, labs, and READMEs incrementally |
+| 016 | Loss Functions and Output-Layer Design | Implemented | logits-first BCE/categorical CE, regression/Huber losses, output-design recommendations, tests |
+| 017 | Learning-Rate Schedules and Optimization Control | Implemented | warmup/step/exponential/cosine schedules, plateau controller, demo, tests |
+| 018 | Initialization and Deep Signal Propagation | Implemented | Xavier/He/LeCun initialization, seeded matrices, forward-signal statistics, tests |
+| 019 | Gradient Flow and Deep-Network Stability | Implemented | global/per-layer gradient stats, finite checks, health classification, diagnostics demo, tests |
+| 020 | Training-Loop Engineering & Reproducible Experiment Runners | Implemented | experiment config/fingerprint, schedules, optimizer integration, diagnostics, JSON records, tests |
+| 021 | Convolutional Neural Networks from First Principles | Queued | Next implementation batch |
+| 022 | CNN Architecture Design: From LeNet to ResNet | Queued | Next implementation batch |
+| 023 | Efficient CNNs & Mobile Vision | Queued | Next implementation batch |
+| 024 | Object Detection from First Principles to Real-Time Systems | Queued | Next implementation batch |
+| 025 | Image Segmentation: From Pixels to Panoptic Understanding | Queued | Next implementation batch |
+| 026–120 | Remaining NeuralForge curriculum | Planned | Add part-specific code, tests, labs, and READMEs incrementally |
 
 ## Repository-wide implementation requirements
 
@@ -44,14 +49,13 @@ A part should not be marked **Implemented** until it has, where applicable:
 4. dependency declarations isolated to the part when third-party packages are required;
 5. reproducibility notes for experiments that report metrics;
 6. licensing/provenance notes for third-party data, models, or assets;
-7. CI coverage or a documented reason why automated execution is impractical.
+7. CI coverage or a documented reason why automated execution is impractical;
+8. the canonical reader-facing Gumroad destination in its README: `https://ramsandesh.gumroad.com`.
 
 ## Next batch
 
-Parts **016–020** will turn the framework-light autodiff/training foundations into a more complete training system: objective/output-layer pairing, learning-rate schedules, initialization, gradient-flow diagnostics, and reproducible training-loop engineering.
+Parts **021–025** move the companion repository into visual deep learning: convolution mechanics, CNN architecture design, efficient/mobile vision, object detection, and image segmentation. The implementation should preserve the current pattern of inspectable foundations before larger framework-specific stacks are introduced.
 
-## Official storefront
+---
 
-Available Ram Sandesh digital publications and storefront releases are linked through the canonical Gumroad destination:
-
-**https://ramsandesh.gumroad.com**
+**Official Gumroad Storefront:** **https://ramsandesh.gumroad.com**
