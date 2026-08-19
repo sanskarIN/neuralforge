@@ -61,8 +61,10 @@ The companion repository uses its own semantic-style versioning. Book/publicatio
 - Pull request #7 merged Parts 006–010 after 65 dependency-free tests passed on Python 3.10, 3.11, and 3.12, the isolated NumPy Part 003 job passed, and repository invariant validation passed.
 - Pull request #8 merged Parts 011–015 after repository validation, Python 3.10/3.11/3.12 tests, and the isolated NumPy Part 003 job all passed on the exact PR head.
 - Pull request #10 merged the complete Gumroad storefront rollout after the full Repository Quality gate passed with canonical storefront checks enabled.
-- Pull request #16 is the clean Parts 016–020 gate and must pass before the staged Parts 021–025 work is rebased/transplanted onto updated `main`.
-- Parts 021–025 are being prepared on a staging branch only; they will receive their own clean pull request and full Repository Quality gate before merge.
+- Pull request #16 merged Parts 016–020 after 150 dependency-free tests passed on Python 3.10, 3.11, and 3.12, repository compilation/invariant validation passed, and the isolated NumPy Part 003 suite passed.
+- Obsolete stacked pull request #15 was closed without merge after its history diverged from `main`.
+- The completed Parts 021–025 staging tree was synchronized with merge commit `5ca826a470a47a361338abb7b51ef6846180bd9a` without changing its tree and promoted to `feat/parts-021-025-clean`.
+- `feat/parts-021-025-clean` is verified 0 commits behind current `main`; it must pass its own exact-head Repository Quality gate before merge.
 
 ## [0.1.0] - 2026-08-18
 
