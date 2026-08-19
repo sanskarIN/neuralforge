@@ -35,6 +35,11 @@ The companion repository uses its own semantic-style versioning. Book/publicatio
 - Part 018 companion: Xavier/Glorot, He/Kaiming, LeCun and baseline initializers, seeded matrices, forward-signal summaries, demo, and tests.
 - Part 019 companion: global/per-layer gradient statistics, finite-gradient checks, parameter/gradient ratios, health classification, demo, and tests.
 - Part 020 companion: reproducible experiment configuration, deterministic fingerprints, schedule/optimizer integration, gradient diagnostics, JSON records, demo, and tests.
+- Part 021 companion: dependency-free 2D cross-correlation/convolution, stride/padding/dilation output shapes, max/average pooling, edge-filter demo, and hand-computed tests.
+- Part 022 companion: architecture-as-data modeling for LeNet-5, AlexNet, VGG-11, and ResNet-18-style networks, with shape propagation, parameter counts, residual projections, demo, and tests.
+- Part 023 companion: standard/depthwise-separable convolution parameter/MAC estimates, channel/resolution scaling, inverted-residual costs, efficiency ratios, demo, and tests.
+- Part 024 companion: bounding-box conversion/clipping, IoU, class-aware/agnostic NMS, greedy matching, precision/recall, post-processing demo, and tests.
+- Part 025 companion: binary/multiclass segmentation confusion metrics, IoU/Dice, ignore labels, probability thresholding, majority filtering, demo, and tests.
 - Part-by-part implementation status tracker for the 120-part curriculum.
 - Official Ram Sandesh Gumroad storefront integration using canonical URL `https://ramsandesh.gumroad.com`.
 - Custom clickable repository storefront asset at `assets/gumroad-storefront.svg`.
@@ -45,9 +50,9 @@ The companion repository uses its own semantic-style versioning. Book/publicatio
 ### Changed
 - Modernized GitHub workflows to `actions/checkout@v7`, `actions/setup-python@v7`, and `actions/upload-artifact@v7`.
 - Expanded the README from repository planning notes into a runnable quick-start, implementation-status, automation, documentation, licensing, and storefront guide.
-- Advanced the README, roadmap, package API, validator, and implementation tracker through Parts 001–020.
-- Strengthened repository validation to require all implemented Part 001–020 directories, shared modules, and milestone tests.
-- Queued Parts 021–025 as the next visual-deep-learning milestone.
+- Advanced the README, roadmap, package API, validator, and implementation tracker through Parts 001–025.
+- Strengthened repository validation to require all implemented Part 001–025 directories, 27 shared modules, and 15 milestone test modules.
+- Preserved `https://ramsandesh.gumroad.com` as a required reader-facing link in every implemented Part README while technical code/tests remain free of promotional-link requirements.
 - Clarified that the companion package/repository version is independent of the book publication version.
 - Promoted `https://ramsandesh.gumroad.com` to a canonical durable storefront destination on GitHub-facing NeuralForge surfaces.
 
@@ -56,7 +61,8 @@ The companion repository uses its own semantic-style versioning. Book/publicatio
 - Pull request #7 merged Parts 006–010 after 65 dependency-free tests passed on Python 3.10, 3.11, and 3.12, the isolated NumPy Part 003 job passed, and repository invariant validation passed.
 - Pull request #8 merged Parts 011–015 after repository validation, Python 3.10/3.11/3.12 tests, and the isolated NumPy Part 003 job all passed on the exact PR head.
 - Pull request #10 merged the complete Gumroad storefront rollout after the full Repository Quality gate passed with canonical storefront checks enabled.
-- Parts 016–020 are staged on a clean branch based on current `main` and will merge only after the exact replacement PR head passes the same validation matrix.
+- Pull request #16 is the clean Parts 016–020 gate and must pass before the staged Parts 021–025 work is rebased/transplanted onto updated `main`.
+- Parts 021–025 are being prepared on a staging branch only; they will receive their own clean pull request and full Repository Quality gate before merge.
 
 ## [0.1.0] - 2026-08-18
 
