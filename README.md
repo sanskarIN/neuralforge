@@ -24,7 +24,7 @@ For available digital publications and storefront releases, visit the **Ram Sand
 
 ## Current implementation status
 
-Parts **001–015** now have runnable companion implementations and automated tests:
+Parts **001–020** now have runnable companion implementations and automated tests:
 
 | Part | Topic | Companion focus |
 |---:|---|---|
@@ -43,6 +43,11 @@ Parts **001–015** now have runnable companion implementations and automated te
 | 013 | Optimization | SGD, Momentum, RMSProp, Adam, weight decay, global gradient clipping |
 | 014 | Regularization | L1/L2, inverted dropout, early stopping, generalization monitoring |
 | 015 | Normalization & Stability | Batch/layer normalization, running moments, trainable affine terms, stable softmax |
+| 016 | Losses & Output Design | Logits-first BCE/categorical CE, regression/Huber losses, output-layer recommendations |
+| 017 | Learning-Rate Control | Constant/step/exponential/cosine/warmup schedules and plateau reduction |
+| 018 | Initialization & Signal Propagation | Xavier/He/LeCun initialization and seeded forward-signal diagnostics |
+| 019 | Gradient Flow | Global/per-layer gradient statistics, finite checks, health classification |
+| 020 | Training-Loop Engineering | Reproducible experiment config, fingerprints, schedules, diagnostics, JSON run records |
 
 See [`docs/PART_IMPLEMENTATION_STATUS.md`](docs/PART_IMPLEMENTATION_STATUS.md) for the 120-part implementation tracker.
 
@@ -59,14 +64,14 @@ python -m unittest discover -s tests -p "test_*.py" -v
 For imports when running examples directly from the repository:
 
 ```bash
-PYTHONPATH=src python parts/011-autograd/autograd_demo.py
+PYTHONPATH=src python parts/020-training-loop-engineering/experiment_demo.py
 ```
 
 PowerShell:
 
 ```powershell
 $env:PYTHONPATH = "src"
-python parts/011-autograd/autograd_demo.py
+python parts/020-training-loop-engineering/experiment_demo.py
 ```
 
 The core companion package supports Python **3.10+**. Part 003 intentionally isolates its current NumPy dependency and uses Python **3.12+**.
